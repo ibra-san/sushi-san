@@ -5,10 +5,10 @@
 Color palette used: 
 
 Palette 1: 
-    - #F8F0E5
-    - #EADBC8
-    - #DAC0A3
-    - #102C57
+    - #F8F0E5 //light beige
+    - #EADBC8 // Normal Beige
+    - #DAC0A3 // Dark beige
+    - #102C57 // Dark Blue 
 
     (Link to palette 1:)[https://colorhunt.co/palette/f8f0e5eadbc8dac0a3102c57]
 
