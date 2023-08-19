@@ -1,0 +1,19 @@
+
+
+@media (max-width:780px) { 
+    .sm-menu-hide { 
+        display: none;
+    }
+    
+    .sm-menu-appear { 
+        display: flex;
+    }
+    
+    .sm-menu-btn-hide { 
+        display: none;
+    }
+    
+    .sm-menu-btn-appear { 
+        display: block;
+    }
+}

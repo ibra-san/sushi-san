@@ -7,6 +7,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&family=Cedarville+Cursive&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Beth+Ellen&family=Sacramento&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js" defer></script>
     <title>Sushi San</title>
 </head>
 <body class="bg-[#F8F0E5] font-['Be_Vietnam_Pro']">
@@ -19,23 +21,36 @@
         -->
         <div class="logo-container | inline-flex items-center text-[13] gap-3 ">
             <img src="../assets/Sushi san logo.png" alt="sushi san restaurant" class=" w-[50px] ">
-            <a href="#" class="font-['Beth_Ellen'] text-[#102C57]">Sushi San</a>
+            <a href="#" class="font-['Beth_Ellen'] text-[#102C57] text-[12px] lg:text-[14px]">Sushi San</a>
         </div>
         
-        <ul role="list" class="border border-[#DAC0A3] rounded-[10px] bg-[#EADBC8] p-5 flex flex-col gap-5 w-[200px] items-center absolute top-[4rem] right-7 text-[#102C57] md:flex-row md:relative md:w-auto md:bg-transparent md:border-none md:rounded-none md:items-start md:justify-center md:top-0 md:right-0 md:text-[15px]" >
-            <li><a href="#">About</a></li>
-            <li><a href="#">Gallary</a></li>
-            <li><a href="#">Menu</a></li>
-            <li><a href="#">Reach Us</a></li>
-        </ul>
+        <div class="border border-[#DAC0A3] rounded-[10px] bg-[#EADBC8] p-5 flex flex-col gap-5 w-[200px] items-center absolute top-[4rem] right-7 text-[#102C57] justify-center md:flex-row md:relative md:items-center md:justify-around md:border md:border-[#DAC0A3] md:rounded-l-[50px] md:top-0 md:right-0 md:text-[15px] md:w-[80%] lg:w-[60%] xl:w-[45%] | sm-menu-hide" id="sm-menu">
+
+            <a href="#" class="inline-flex w-full md:w-auto pl-2 pr-2 items-center gap-2 md:justify-center">
+                <img class="w-[30px]" src="../assets/about.png" alt="click here for about section" srcset="">
+                <p>About</p>
+            </a>
+            <a href="#" class="inline-flex w-full md:w-auto pl-2 pr-2 items-center gap-2 md:justify-center">
+                <img class="w-[30px]" src="../assets/Gallary.png" alt="click here for about section" srcset="">
+                <p>Gallary</p>
+            </a>
+            <a href="#" class="inline-flex w-full md:w-auto pl-2 pr-2 items-center gap-2 md:justify-center">
+                <img class="w-[30px]" src="../assets/rest-menu.png" alt="click here for about section" srcset="">
+                <p>Menu</p>
+            </a>
+            <a href="#" class="inline-flex w-full md:w-auto pl-2 pr-2 items-center gap-2 md:justify-center">
+                <img class="w-[30px]" src="../assets/contact us.png" alt="click here for about section" srcset="">
+                <p>Reach Us</p>
+            </a>
+        </div>
 
         <!--Smaller screen HTML tags below (hiden or shown depending on screen size)-->
-        <a  href="#"  id="close-button-container" class="md:hidden absolute right-4"> 
-            <img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/delete-sign.png" alt="close menu button"/>
+        <a class="w-[25px]  md:hidden absolute right-4 | "  href="#"  id="open-button-container"> 
+            <svg class="fill-[#102C57]" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 30 30"><path d="M 3 7 A 1.0001 1.0001 0 1 0 3 9 L 27 9 A 1.0001 1.0001 0 1 0 27 7 L 3 7 z M 3 14 A 1.0001 1.0001 0 1 0 3 16 L 27 16 A 1.0001 1.0001 0 1 0 27 14 L 3 14 z M 3 21 A 1.0001 1.0001 0 1 0 3 23 L 27 23 A 1.0001 1.0001 0 1 0 27 21 L 3 21 z"/></svg>
         </a>
 
-        <a href="#"  id="open-button-container" class=" md:hidden absolute right-4"> 
-            <img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/menu--v1.png" alt="open menu button"/>
+        <a class=" w-[25px] md:hidden absolute right-4 | sm-menu-btn-hide" href="#"  id="close-button-container" > 
+            <svg class="fill-red-900" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 30 30">    <path d="M 7 4 C 6.744125 4 6.4879687 4.0974687 6.2929688 4.2929688 L 4.2929688 6.2929688 C 3.9019687 6.6839688 3.9019687 7.3170313 4.2929688 7.7070312 L 11.585938 15 L 4.2929688 22.292969 C 3.9019687 22.683969 3.9019687 23.317031 4.2929688 23.707031 L 6.2929688 25.707031 C 6.6839688 26.098031 7.3170313 26.098031 7.7070312 25.707031 L 15 18.414062 L 22.292969 25.707031 C 22.682969 26.098031 23.317031 26.098031 23.707031 25.707031 L 25.707031 23.707031 C 26.098031 23.316031 26.098031 22.682969 25.707031 22.292969 L 18.414062 15 L 25.707031 7.7070312 C 26.098031 7.3170312 26.098031 6.6829688 25.707031 6.2929688 L 23.707031 4.2929688 C 23.316031 3.9019687 22.682969 3.9019687 22.292969 4.2929688 L 15 11.585938 L 7.7070312 4.2929688 C 7.5115312 4.0974687 7.255875 4 7 4" /></svg>
         </a>
     </nav>
 
