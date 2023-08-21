@@ -3,56 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="/dist/output.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&family=Cedarville+Cursive&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Beth+Ellen&family=Sacramento&display=swap" rel="stylesheet">
+    <link href="/dist/output.css" rel="stylesheet"> 
     <link rel="stylesheet" href="style.css">
     <script src="index.js" defer></script>
     <title>Sushi San</title>
 </head>
-<body class="bg-[#F8F0E5] font-['Be_Vietnam_Pro']">
-    <nav class=" p-2 inline-flex justify-between items-center w-full relative"> 
-        <!-- Nav bar section
-            contains the following: 
-            1. Company logo
-            2. Nav bar items and buttons
-            3. For mobile and smaller screens create a vertical menu (hide and show depending on screen size)
-        -->
-        <div class="logo-container | inline-flex items-center text-[13] gap-3 ">
-            <img src="../assets/Sushi san logo.png" alt="sushi san restaurant" class=" w-[50px] ">
-            <a href="#" class="font-['Beth_Ellen'] text-[#102C57] text-[12px] lg:text-[14px]">Sushi San</a>
-        </div>
-        
-        <div class="border border-[#DAC0A3] rounded-[10px] bg-[#EADBC8] p-5 flex flex-col gap-5 w-[200px] items-center absolute top-[4rem] right-7 text-[#102C57] justify-center md:flex-row md:relative md:items-center md:justify-around md:border md:border-[#DAC0A3] md:rounded-l-[50px] md:top-0 md:right-0 md:text-[15px] md:w-[80%] lg:w-[60%] xl:w-[45%] | sm-menu-hide" id="sm-menu">
-
-            <a href="#" class="inline-flex w-full md:w-auto pl-2 pr-2 items-center gap-2 md:justify-center">
-                <img class="w-[30px]" src="../assets/about.png" alt="click here for about section" srcset="">
-                <p>About</p>
-            </a>
-            <a href="#" class="inline-flex w-full md:w-auto pl-2 pr-2 items-center gap-2 md:justify-center">
-                <img class="w-[30px]" src="../assets/Gallary.png" alt="click here for about section" srcset="">
-                <p>Gallary</p>
-            </a>
-            <a href="#" class="inline-flex w-full md:w-auto pl-2 pr-2 items-center gap-2 md:justify-center">
-                <img class="w-[30px]" src="../assets/rest-menu.png" alt="click here for about section" srcset="">
-                <p>Menu</p>
-            </a>
-            <a href="#" class="inline-flex w-full md:w-auto pl-2 pr-2 items-center gap-2 md:justify-center">
-                <img class="w-[30px]" src="../assets/contact us.png" alt="click here for about section" srcset="">
-                <p>Reach Us</p>
-            </a>
-        </div>
-
-        <!--Smaller screen HTML tags below (hiden or shown depending on screen size)-->
-        <a class="w-[25px]  md:hidden absolute right-4 | "  href="#"  id="open-button-container"> 
-            <svg class="fill-[#102C57]" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 30 30"><path d="M 3 7 A 1.0001 1.0001 0 1 0 3 9 L 27 9 A 1.0001 1.0001 0 1 0 27 7 L 3 7 z M 3 14 A 1.0001 1.0001 0 1 0 3 16 L 27 16 A 1.0001 1.0001 0 1 0 27 14 L 3 14 z M 3 21 A 1.0001 1.0001 0 1 0 3 23 L 27 23 A 1.0001 1.0001 0 1 0 27 21 L 3 21 z"/></svg>
-        </a>
-
-        <a class=" w-[25px] md:hidden absolute right-4 | sm-menu-btn-hide" href="#"  id="close-button-container" > 
-            <svg class="fill-red-900" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 30 30">    <path d="M 7 4 C 6.744125 4 6.4879687 4.0974687 6.2929688 4.2929688 L 4.2929688 6.2929688 C 3.9019687 6.6839688 3.9019687 7.3170313 4.2929688 7.7070312 L 11.585938 15 L 4.2929688 22.292969 C 3.9019687 22.683969 3.9019687 23.317031 4.2929688 23.707031 L 6.2929688 25.707031 C 6.6839688 26.098031 7.3170313 26.098031 7.7070312 25.707031 L 15 18.414062 L 22.292969 25.707031 C 22.682969 26.098031 23.317031 26.098031 23.707031 25.707031 L 25.707031 23.707031 C 26.098031 23.316031 26.098031 22.682969 25.707031 22.292969 L 18.414062 15 L 25.707031 7.7070312 C 26.098031 7.3170312 26.098031 6.6829688 25.707031 6.2929688 L 23.707031 4.2929688 C 23.316031 3.9019687 22.682969 3.9019687 22.292969 4.2929688 L 15 11.585938 L 7.7070312 4.2929688 C 7.5115312 4.0974687 7.255875 4 7 4" /></svg>
-        </a>
-    </nav>
-
+<body class="bg-slate-900 text-slate-100">
+    <section>
+        <nav class="relative">
+            <a class=""  href="#">sushi san</a>
+            <div class="flex">
+                <div class="absolute w-full h-screen bg-black bg-opacity-50 top-0 right-0" id="overlay"></div>
+                <ul class="absolute bg-slate-800 h-screen top-0 right-0 w-[200px] p-4 flex flex-col items-center gap-6">
+                    <svg class=" absolute w-[30px] fill-white hover:fill-red-800 hover:cursor-pointer" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 50 50"><path d="M 7.71875 6.28125 L 6.28125 7.71875 L 23.5625 25 L 6.28125 42.28125 L 7.71875 43.71875 L 25 26.4375 L 42.28125 43.71875 L 43.71875 42.28125 L 26.4375 25 L 43.71875 7.71875 L 42.28125 6.28125 L 25 23.5625 Z"/></svg>
+                    <a class="w-full mt-[60px] p-3 text-center border border-slate-100 hover:bg-slate-100 hover:text-black" href="#"><li>History</li></a>
+                    <a class="w-full p-3 text-center border border-slate-100 hover:bg-slate-100 hover:text-black" href="#"><li>Gallary</li></a>
+                    <a class="w-full p-3 text-center border border-slate-100 hover:bg-slate-100 hover:text-black" href="#"><li>Reservation</li></a>
+                    <a class="w-full p-3 text-center border border-slate-100 hover:bg-slate-100 hover:text-black" href="#"><li>Contact Us</li></a>
+                    <div class="inline-flex justify-center gap-5">
+                        <a href="https://www.instagram.com/imsanwork/" target="_blank">
+                            <svg class="w-[30px] fill-slate-100 hover:fill-yellow-400" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 50 50" ><path d="M 16 3 C 8.8324839 3 3 8.8324839 3 16 L 3 34 C 3 41.167516 8.8324839 47 16 47 L 34 47 C 41.167516 47 47 41.167516 47 34 L 47 16 C 47 8.8324839 41.167516 3 34 3 L 16 3 z M 16 5 L 34 5 C 40.086484 5 45 9.9135161 45 16 L 45 34 C 45 40.086484 40.086484 45 34 45 L 16 45 C 9.9135161 45 5 40.086484 5 34 L 5 16 C 5 9.9135161 9.9135161 5 16 5 z M 37 11 A 2 2 0 0 0 35 13 A 2 2 0 0 0 37 15 A 2 2 0 0 0 39 13 A 2 2 0 0 0 37 11 z M 25 14 C 18.936712 14 14 18.936712 14 25 C 14 31.063288 18.936712 36 25 36 C 31.063288 36 36 31.063288 36 25 C 36 18.936712 31.063288 14 25 14 z M 25 16 C 29.982407 16 34 20.017593 34 25 C 34 29.982407 29.982407 34 25 34 C 20.017593 34 16 29.982407 16 25 C 16 20.017593 20.017593 16 25 16 z"/></svg>
+                        </a>
+                        <a href="https://www.pinterest.com/imsanwork/" target="_blank">
+                            <svg class="w-[30px] fill-slate-100 hover:fill-pink-500" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 50 50"><path d="M 25 2 C 12.309295 2 2 12.309295 2 25 C 2 37.690705 12.309295 48 25 48 C 37.690705 48 48 37.690705 48 25 C 48 12.309295 37.690705 2 25 2 z M 25 4 C 36.609825 4 46 13.390175 46 25 C 46 36.609825 36.609825 46 25 46 C 22.876355 46 20.82771 45.682142 18.896484 45.097656 C 19.75673 43.659418 20.867347 41.60359 21.308594 39.90625 C 21.570728 38.899887 22.648438 34.794922 22.648438 34.794922 C 23.348841 36.132057 25.395277 37.263672 27.574219 37.263672 C 34.058123 37.263672 38.732422 31.300682 38.732422 23.890625 C 38.732422 16.78653 32.935409 11.472656 25.476562 11.472656 C 16.196831 11.472656 11.271484 17.700825 11.271484 24.482422 C 11.271484 27.636307 12.94892 31.562193 15.634766 32.8125 C 16.041611 33.001865 16.260073 32.919834 16.353516 32.525391 C 16.425459 32.226044 16.788267 30.766792 16.951172 30.087891 C 17.003269 29.871239 16.978043 29.68405 16.802734 29.470703 C 15.913793 28.392399 15.201172 26.4118 15.201172 24.564453 C 15.201172 19.822048 18.791452 15.232422 24.908203 15.232422 C 30.18976 15.232422 33.888672 18.832872 33.888672 23.980469 C 33.888672 29.796219 30.95207 33.826172 27.130859 33.826172 C 25.020554 33.826172 23.440361 32.080359 23.947266 29.939453 C 24.555054 27.38426 25.728516 24.626944 25.728516 22.78125 C 25.728516 21.130713 24.842754 19.753906 23.007812 19.753906 C 20.850369 19.753906 19.117188 21.984457 19.117188 24.974609 C 19.117187 26.877359 19.761719 28.166016 19.761719 28.166016 C 19.761719 28.166016 17.630543 37.176514 17.240234 38.853516 C 16.849091 40.52931 16.953851 42.786365 17.115234 44.466797 C 9.421139 41.352465 4 33.819328 4 25 C 4 13.390175 13.390175 4 25 4 z"/></svg>
+                        </a>
+                    </div>
+                </ul>
+            </div>
+            
+        </nav>
+    </section>
 </body>
 </html>
