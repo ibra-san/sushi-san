@@ -1,6 +1,6 @@
 
 
-@media (max-width:767px) { 
+/* @media (max-width:767px) { 
     .sm-menu-hide { 
         display: none;
     }
@@ -18,9 +18,14 @@
     }
 }
 
+*/ 
 
-.writing-mode-vertical {
-    writing-mode: vertical-rl; /* Vertical text from top to bottom */
-    text-orientation: mixed; /* This property specifies the orientation of text within lines */
-    transform: rotate(360deg); /* To make the text appear right-side up */
-  }
+
+.menu-appear { 
+    transition: 0.5s ease-in-out;
+    transform: translateX(0);
+}
+
+.nav{ 
+    transition: 0.3s ease-in-out;
+}

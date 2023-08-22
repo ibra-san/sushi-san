@@ -8,14 +8,28 @@
     <script src="index.js" defer></script>
     <title>Sushi San</title>
 </head>
-<body class="bg-slate-900 text-slate-100">
+<body class="bg-slate-900 text-slate-100 overflow-x-hidden">
     <section>
-        <nav class="relative">
-            <a class=""  href="#">sushi san</a>
-            <div class="flex">
-                <div class="absolute w-full h-screen bg-black bg-opacity-50 top-0 right-0" id="overlay"></div>
-                <ul class="absolute bg-slate-800 h-screen top-0 right-0 w-[200px] p-4 flex flex-col items-center gap-6">
-                    <svg class=" absolute w-[30px] fill-white hover:fill-red-800 hover:cursor-pointer" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 50 50"><path d="M 7.71875 6.28125 L 6.28125 7.71875 L 23.5625 25 L 6.28125 42.28125 L 7.71875 43.71875 L 25 26.4375 L 42.28125 43.71875 L 43.71875 42.28125 L 26.4375 25 L 43.71875 7.71875 L 42.28125 6.28125 L 25 23.5625 Z"/></svg>
+
+        <nav id="nav" class="fixed w-full bg-black  bg-opacity-10" >
+
+            <!-- This div contains the items that will show when the menu is closed-->
+            <div class="flex justify-between p-7 bg-transparent">
+                <!-- Company logo below -->
+                <a class=""  href="#">sushi san</a>
+                <!-- Open menu btn -->
+                <div id="menu-open" class="">
+                    <svg class="transition ease-in-out w-[30px] h-[20px] fill-slate-100 hover:fill-white hover:cursor-pointer hover:scale-125 " xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 50 50"><path d="M 0 9 L 0 11 L 50 11 L 50 9 Z M 0 24 L 0 26 L 50 26 L 50 24 Z M 0 39 L 0 41 L 50 41 L 50 39 Z"/></svg>
+                </div>
+            </div>
+            
+            <!-- The div below contains the menu and its overlay-->
+            <div id="menu" class="fixed top-0 right-0 bg-black translate-x-[100vw] transition duration-500 ease-in-out  bg-opacity-50 w-[100vw] inline-flex flex-row-reverse">
+                <!-- Overlay below-->
+                <!--Menu Container-->
+                <ul class="bg-slate-800 h-screen top-0 right-0 w-[200px] p-4 flex flex-col items-center gap-6">
+                    <!--Close menu btn-->
+                    <svg id="menu-close" class=" transition-transform ease-in-out absolute w-[30px] fill-white hover:fill-red-500 hover:cursor-pointer hover:scale-125 hover:rotate-90" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 50 50"><path d="M 7.71875 6.28125 L 6.28125 7.71875 L 23.5625 25 L 6.28125 42.28125 L 7.71875 43.71875 L 25 26.4375 L 42.28125 43.71875 L 43.71875 42.28125 L 26.4375 25 L 43.71875 7.71875 L 42.28125 6.28125 L 25 23.5625 Z"/></svg>
                     <a class="w-full mt-[60px] p-3 text-center border border-slate-100 hover:bg-slate-100 hover:text-black" href="#"><li>History</li></a>
                     <a class="w-full p-3 text-center border border-slate-100 hover:bg-slate-100 hover:text-black" href="#"><li>Gallary</li></a>
                     <a class="w-full p-3 text-center border border-slate-100 hover:bg-slate-100 hover:text-black" href="#"><li>Reservation</li></a>
@@ -32,6 +46,9 @@
             </div>
             
         </nav>
+
     </section>
+
+    <section class=""></section>
 </body>
 </html>
