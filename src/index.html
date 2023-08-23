@@ -3,15 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;800;900&display=swap" rel="stylesheet">
     <link href="/dist/output.css" rel="stylesheet"> 
     <link rel="stylesheet" href="style.css">
     <script src="index.js" defer></script>
     <title>Sushi San</title>
 </head>
-<body class="bg-slate-900 text-slate-100 overflow-x-hidden">
-    <section>
+<body class=" overflow-x-hidden font-['Poppins']">
 
-        <nav id="nav" class="fixed w-full bg-black  bg-opacity-10" >
+    <!-- Navbar section and menu-->
+    <section class="text-slate-50">
+
+        <nav id="nav" class="z-[1000000] fixed w-full bg-gray-950 bg-opacity-20" >
 
             <!-- This div contains the items that will show when the menu is closed-->
             <div class="flex justify-between p-7 bg-transparent">
@@ -28,12 +33,14 @@
                 <!-- Overlay below-->
                 <!--Menu Container-->
                 <ul class="bg-slate-800 h-screen top-0 right-0 w-[200px] p-4 flex flex-col items-center gap-6">
-                    <!--Close menu btn-->
+                    <!--Close menu btn svg-->
                     <svg id="menu-close" class=" transition-transform ease-in-out absolute w-[30px] fill-white hover:fill-red-500 hover:cursor-pointer hover:scale-125 hover:rotate-90" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 50 50"><path d="M 7.71875 6.28125 L 6.28125 7.71875 L 23.5625 25 L 6.28125 42.28125 L 7.71875 43.71875 L 25 26.4375 L 42.28125 43.71875 L 43.71875 42.28125 L 26.4375 25 L 43.71875 7.71875 L 42.28125 6.28125 L 25 23.5625 Z"/></svg>
+                    <!-- Menu items and content-->
                     <a class="w-full mt-[60px] p-3 text-center border border-slate-100 hover:bg-slate-100 hover:text-black" href="#"><li>History</li></a>
                     <a class="w-full p-3 text-center border border-slate-100 hover:bg-slate-100 hover:text-black" href="#"><li>Gallary</li></a>
                     <a class="w-full p-3 text-center border border-slate-100 hover:bg-slate-100 hover:text-black" href="#"><li>Reservation</li></a>
                     <a class="w-full p-3 text-center border border-slate-100 hover:bg-slate-100 hover:text-black" href="#"><li>Contact Us</li></a>
+                    <!-- Social media btns container-->
                     <div class="inline-flex justify-center gap-5">
                         <a href="https://www.instagram.com/imsanwork/" target="_blank">
                             <svg class="w-[30px] fill-slate-100 hover:fill-yellow-400" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 50 50" ><path d="M 16 3 C 8.8324839 3 3 8.8324839 3 16 L 3 34 C 3 41.167516 8.8324839 47 16 47 L 34 47 C 41.167516 47 47 41.167516 47 34 L 47 16 C 47 8.8324839 41.167516 3 34 3 L 16 3 z M 16 5 L 34 5 C 40.086484 5 45 9.9135161 45 16 L 45 34 C 45 40.086484 40.086484 45 34 45 L 16 45 C 9.9135161 45 5 40.086484 5 34 L 5 16 C 5 9.9135161 9.9135161 5 16 5 z M 37 11 A 2 2 0 0 0 35 13 A 2 2 0 0 0 37 15 A 2 2 0 0 0 39 13 A 2 2 0 0 0 37 11 z M 25 14 C 18.936712 14 14 18.936712 14 25 C 14 31.063288 18.936712 36 25 36 C 31.063288 36 36 31.063288 36 25 C 36 18.936712 31.063288 14 25 14 z M 25 16 C 29.982407 16 34 20.017593 34 25 C 34 29.982407 29.982407 34 25 34 C 20.017593 34 16 29.982407 16 25 C 16 20.017593 20.017593 16 25 16 z"/></svg>
@@ -49,6 +56,31 @@
 
     </section>
 
-    <section class=""></section>
+    <!--Video background section and intro section website-->
+
+    <section class="absolute w-full min-h-screen p-[100px] flex flex-row justify-between items-center bg-gray-950 text-white ">
+        <!--Video of sushi-->
+        <video class="absolute z-[10] top-0 right-0 w-full h-full object-cover" src="../assets/sushi video 3.mp4" autoplay loop muted></video> 
+
+        <!-- Video overlay -->
+        <div class="absolute z-[30] top-0 right-0 w-full h-full bg-gray-500 mix-blend-overlay "></div>
+
+        <!--Intro section to the website-->
+       
+        <div class="absolute z-[40] flex flex-col gap-7">
+            <h1 class="text-[50px]">SUSHI SAN</h1>
+            <h2 class="max-w-[300px] text-[20px] font-bold">The authentic Sushi taste and experience only at SUSHI SAN</h2>
+            <p class="max-w-[300px]">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis corrupti architecto iusto laboriosam tempore id deserunt, necessitatibus est ipsam reprehenderit!</p>
+             <!-- Cta buttons container -->
+            <div class="flex gap-[50px]">
+                <a href="#" class="p-2 pl-4 pr-4 border border-slate-100 hover:bg-slate-100 hover:text-slate-950">Menu</a>
+                <a href="#" class="p-2 pl-4 pr-4 border border-slate-100 hover:bg-slate-100 hover:text-slate-950">Reservation</a>
+            </div>
+        </div>
+        
+
+       
+        
+    </section>
 </body>
 </html>
