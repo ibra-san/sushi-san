@@ -1,16 +1,26 @@
 
 const navBar = document.querySelector("#nav");
+const overlay = document.querySelector("#overlay")
 const menu = document.querySelector("#menu"); // The container that contains the overlay and menu 
+const menuItems = document.querySelector("#menu-items")
 const menuOpenBtn = document.querySelector("#menu-open"); 
 const menuCloseBtn = document.querySelector("#menu-close"); 
 
 
 menuOpenBtn.addEventListener("click", () => { 
-    menu.classList.toggle("menu-appear");
+    menu.classList.add("menu-appear");
 })
 
 menuCloseBtn.addEventListener("click", () => { 
-    menu.classList.toggle("menu-appear");
+    menu.classList.remove("menu-appear");
+})
+
+overlay.addEventListener("click", ()=> { 
+    menu.classList.remove("menu-appear");
+} )
+
+menuItems.addEventListener("click", ()=> { 
+    menu.classList.remove("menu-appear");
 })
 
 /* To make sure the navbar stays when you scroll and disappear when you scroll down */
