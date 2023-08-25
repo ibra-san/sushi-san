@@ -11,7 +11,7 @@
     <script src="index.js" defer></script>
     <title>Sushi San</title>
 </head>
-<body class="overflow-x-hidden font-['Poppins']">
+<body class="overflow-x-hidden font-['Poppins'] bg-gray-900 text-slate-50">
 
     <!-- Navbar section and menu-->
     <section class=" text-slate-50">
@@ -38,7 +38,7 @@
                     <svg id="menu-close" class=" transition-transform ease-in-out absolute w-[30px] fill-white hover:fill-red-500 hover:cursor-pointer hover:scale-125 hover:rotate-90" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 50 50"><path d="M 7.71875 6.28125 L 6.28125 7.71875 L 23.5625 25 L 6.28125 42.28125 L 7.71875 43.71875 L 25 26.4375 L 42.28125 43.71875 L 43.71875 42.28125 L 26.4375 25 L 43.71875 7.71875 L 42.28125 6.28125 L 25 23.5625 Z"/></svg>
                     <!-- Menu items and content-->
                     <a class="w-full mt-[60px] p-3 text-center border border-slate-100 hover:bg-slate-100 hover:text-black" href="#history"><li>History</li></a>
-                    <a class="w-full p-3 text-center border border-slate-100 hover:bg-slate-100 hover:text-black" href="#"><li>Gallary</li></a>
+                    <a class="w-full p-3 text-center border border-slate-100 hover:bg-slate-100 hover:text-black" href="#gallary"><li>Gallary</li></a>
                     <a class="w-full p-3 text-center border border-slate-100 hover:bg-slate-100 hover:text-black" href="#"><li>Reservation</li></a>
                     <a class="w-full p-3 text-center border border-slate-100 hover:bg-slate-100 hover:text-black" href="#"><li>Contact Us</li></a>
                     <!-- Social media btns container-->
@@ -105,6 +105,50 @@
                 <p>Signature - Sushi San</p>
             </div>
         </div>
+    </section>
+
+
+    <!-- The section below contains all the gallary components of the page-->
+    <section id="gallary" >
+        <!--general content container -->
+        <div class="block">
+            <div class="pt-[50px] pb-[50px] md:w-[80%] pl-4 pr-4">
+                <h2 class="text-[30px] sm:text-[50px] ">Gallary</h2>
+                <!-- Div below is for the underline -->
+                <div class="w-[100px] bg-slate-50 h-[1px] pl-4 pr-4 mt-3"></div>
+            </div>
+
+            <!-- Image and text container -->
+            <div class="lg:flex lg:flex-row lg:w-[100%] lg:p-[10px]  lg:justify-center lg:gap-7 border">
+                <!--image1 and text1 container-->   
+                <div class="lg:transition-all lg:ease-in-out lg:border lg:rounded-3xl lg:w-[200px] lg:h-[500px] lg:hover:w-[800px] lg:hover:cursor-pointer ">
+                    <img class="lg:transition-all lg:ease-in-out lg:object-cover lg:top-0 lg:right-0 lg:w-full lg:h-full lg:rounded-3xl  " src="/assets/sushi_rest_2.jpg" alt="Sushi san restaurant, Tokyo branch">
+                    <p></p>
+                </div>
+                <!--image2 and text2 container-->
+                <div class="lg:transition-all lg:ease-in-out lg:border lg:rounded-3xl lg:w-[200px] lg:h-[500px] lg:hover:w-[800px] lg:hover:cursor-pointer ">
+                    <img class="lg:transition-all lg:ease-in-out lg:object-cover lg:top-0 lg:right-0 lg:w-full lg:h-full lg:rounded-3xl" src="/assets/sushi_rest_3.jpg" alt="Sushi san restaurant, Kyoto branch">
+                    <p></p>
+                </div>
+                <!--image3 and text3 container-->
+                <div class="lg:transition-all lg:ease-in-out lg:border lg:rounded-3xl lg:w-[200px] lg:h-[500px] lg:hover:w-[800px] lg:hover:cursor-pointer">
+                    <img class="lg:transition-all lg:ease-in-out lg:object-cover lg:top-0 lg:right-0 lg:w-full lg:h-full lg:rounded-3xl" src="/assets/sushi_rest_4.jpg" alt="Sushi san restaurant, Fukukoa branch">
+                    <p></p>
+                </div>
+                <!--image4 and text4 container-->
+                <div class="lg:transition-all lg:ease-in-out lg:border lg:rounded-3xl lg:w-[200px] lg:h-[500px] lg:hover:w-[800px] lg:hover:cursor-pointer ">
+                    <img class="lg:transition-all lg:ease-in-out lg:object-cover lg:top-0 lg:right-0 lg:w-full lg:h-full lg:rounded-3xl" src="/assets/sushi_rest_5.jpg" alt="Sushi san restaurant, Sendai branch">
+                    <p></p>
+                </div>
+                <!--image5 and text5 container-->
+                <div class="lg:transition-all lg:ease-in-out lg:border lg:rounded-3xl lg:w-[200px] lg:h-[500px] lg:hover:w-[800px] lg:hover:cursor-pointer ">
+                    <img class="lg:transition-all lg:ease-in-out lg:object-cover lg:top-0 lg:right-0 lg:w-full lg:h-full lg:rounded-3xl" src="/assets/sushi_rest_6.jpg" alt="Sushi san restaurant, Yokohama branch">
+                    <p></p>
+                </div>
+
+            </div>
+        </div>
+
     </section>
 </body>
 </html>
