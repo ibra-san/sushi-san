@@ -6,6 +6,9 @@ const menuItems = document.querySelector("#menu-items")
 const menuOpenBtn = document.querySelector("#menu-open"); 
 const menuCloseBtn = document.querySelector("#menu-close"); 
 
+// I am selecting the elements below in order to make sure the label disappears when there is text in the input field
+const labelElements = document.getElementsByTagName('label'); 
+const inputElements = document.getElementsByTagName('input'); 
 
 menuOpenBtn.addEventListener("click", () => { 
     menu.classList.add("menu-appear");
@@ -39,3 +42,9 @@ window.onscroll = () => {
     }
     prevScrollpos = currentScrollpos;
 }
+
+
+/* Hiding placeholder if user data is there */
+
+
+
