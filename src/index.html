@@ -207,61 +207,66 @@
             <div class="">
                 <!-- Reservation form conainer div-->
                 <div class=" flex flex-col items-center ">
+                    
                     <form class="   bg-black rounded-3xl flex flex-col items-center  p-5 gap-5 w-[90%] md:max-w-[500px] " action="">
-
-                        <div class="border relative flex flex-col gap-[2px] w-[80%] p-3 group  focus-within:bg-opacity-80">
-                            <label class="transition-all delay-75 ease-in-out absolute z-10 text-[15px] text-slate-500 top-5 left-7 group-focus-within:text-transparent" for="name">Your Name 
+                        <h2 class="text-[20px]"><em>Book Your Spot at Sushi San</em></h2>
+                        <div class=" relative flex flex-col gap-[2px] w-[80%] p-3 group  focus-within:bg-opacity-80">
+                            <input class="rounded-sm text-black p-2 outline-none group-focus-within:ring group-focus-within:ring-blue-400 group-focus:outline-[2px] peer" 
+                            id="name" name="name" type="text" required>  
+                            <label class="transition-all delay-75 ease-in-out absolute text-[15px] text-slate-500 top-5 left-7 group-focus-within:text-transparent peer-focus:top-[-1rem] peer-focus:left-[10px] peer-focus:text-sky-400 peer-focus:text-[0.75rem] peer-valid:top-[-1rem] peer-valid:left-[10px] peer-valid:text-sky-400 peer-valid:text-[0.75rem] peer-[&:not([value=' '])]:top-[-1rem] peer-[&:not([value=' '])]:left-[10px] peer-[&:not([value=' '])]:text-sky-400 peer-[&:not([value=' '])]:text-[0.75rem]" for="name">Your Name 
                             </label>
-                            <input class="text-black p-2  outline-none group-focus-within:ring group-focus-within:ring-blue-400 group-focus:outline-[2px]" 
-                            id="name" name="name" type="text">  
                         </div>
                         
 
-                        <div class="border relative flex flex-col gap-[2px] w-[80%] p-3 group  focus-within:bg-opacity-80">
-                            <label class="transition-all delay-75 ease-in-out absolute z-10 text-[15px] text-slate-500 top-5 left-7 group-focus-within:text-transparent" for="email">Email</label>
-                            <input class="text-black p-2  outline-none group-focus-within:ring group-focus-within:ring-blue-400 group-focus:outline-[2px]" id="email" name="email" type="email" >
+                        <div class=" relative flex flex-col gap-[2px] w-[80%] p-3 group  focus-within:bg-opacity-80">
+                            <input class="text-black p-2  outline-none group-focus-within:ring group-focus-within:ring-blue-400 group-focus:outline-[2px] peer" id="email" name="email" type="email" required>
+                            <label class="transition-all delay-75 ease-in-out absolute text-[15px] text-slate-500 top-5 left-7 group-focus-within:text-transparent peer-focus:top-[-1rem] peer-focus:left-[10px] peer-focus:text-sky-400 peer-focus:text-[0.75rem] peer-valid:top-[-1rem] peer-valid:left-[10px] peer-valid:text-sky-400 peer-valid:text-[0.75rem] peer-[&:not([value=' '])]:top-[-1rem] peer-[&:not([value=' '])]:left-[10px] peer-[&:not([value=' '])]:text-sky-400 peer-[&:not([value=' '])]:text-[0.75rem]" for="email">Email</label>
                         </div>
                         
 
-                        <div class="border relative flex flex-col gap-[2px] w-[80%] p-3 group  focus-within:bg-opacity-80">
-                            <label class="transition-all delay-75 ease-in-out absolute z-10 text-[15px] text-slate-500 top-5 left-7 group-focus-within:text-transparent" for="pnumber">Phone Number</label>
-                            <input class="text-black p-2  outline-none group-focus-within:ring group-focus-within:ring-blue-400 group-focus:outline-[2px]" id="pnumber" name="pnumber" type="tel" >
+                        <div class=" relative flex flex-col gap-[2px] w-[80%] p-3 group  focus-within:bg-opacity-80">
+                            <input class="text-black p-2  outline-none group-focus-within:ring group-focus-within:ring-blue-400 group-focus:outline-[2px] peer" id="pnumber" name="pnumber" type="tel" required>
+                            <label class="transition-all delay-75 ease-in-out absolute text-[15px] text-slate-500 top-5 left-7 group-focus-within:text-transparent peer-focus:top-[-1rem] peer-focus:left-[10px] peer-focus:text-sky-400 peer-focus:text-[0.75rem] peer-valid:top-[-1rem] peer-valid:left-[10px] peer-valid:text-sky-400 peer-valid:text-[0.75rem] peer-[&:not([value=' '])]:top-[-1rem] peer-[&:not([value=' '])]:left-[10px] peer-[&:not([value=' '])]:text-sky-400 peer-[&:not([value=' '])]:text-[0.75rem]" for="pnumber">Phone Number</label>
+                            
                         </div>
                         
 
-                        <div class="border relative flex flex-col gap-[2px] w-[80%] p-3 group  focus-within:bg-opacity-80">
-                            <label class="transition-all delay-75 ease-in-out absolute z-10 text-[15px] text-slate-500 top-5 left-7 group-focus-within:text-transparent" for="rlocation">Restaurant Location:</label>
-                            <select class="text-black p-2  outline-none group-focus-within:ring group-focus-within:ring-blue-400 group-focus:outline-[2px]" name="rlocation" id="rlocation">
-                                <option value="none"></option>
+                        <div class=" relative flex flex-col gap-[2px] w-[80%] p-3 group  focus-within:bg-opacity-80">
+                            <select class="text-black p-2  outline-none group-focus-within:ring group-focus-within:ring-blue-400 group-focus:outline-[2px] peer" name="rlocation" id="rlocation">
+                                <option value="" disabled selected></option>
                                 <option value="tokyo">Tokyo</option>
                                 <option value="kyoto">Kyoto</option>
                                 <option value="fukukoa">Fukukoa</option>
                                 <option value="sendai">Sendai</option>
                                 <option value="yokohama">Yokohama</option>
                             </select>
+                            <label class="transition-all delay-75 ease-in-out absolute text-[15px] text-slate-500 top-5 left-7 group-focus-within:text-transparent peer-focus:top-[-1rem] peer-focus:left-[10px] peer-focus:text-sky-400 peer-focus:text-[0.75rem] peer-valid:top-[-1rem] peer-valid:left-[10px] peer-valid:text-sky-400 peer-valid:text-[0.75rem] peer-[&:not([value=''])]:top-[-1rem] peer-[&:not([value=' '])]:left-[10px] peer-[&:not([value=' '])]:text-sky-400 peer-[&:not([value=' '])]:text-[0.75rem]" for="rlocation">Restaurant Location:</label>
+                            
                         </div>
                         
 
-                        <div class="border relative flex flex-col gap-[2px] w-[80%] p-3 group  focus-within:bg-opacity-80">
-                            <label class="transition-all delay-75 ease-in-out absolute z-10 text-[15px] text-slate-500 top-5 left-7 group-focus-within:text-transparent" for="rseatingtype">Seating Type:</label>
-                            <select class=" border-black text-black p-2  outline-none group-focus-within:ring group-focus-within:ring-blue-400 group-focus:outline-[2px]" name="rseatingt   ype" id="rseatingtype">
-                                <option value="none"></option>
+                        <div class=" relative flex flex-col gap-[2px] w-[80%] p-3 group  focus-within:bg-opacity-80">
+                           <select class=" border-black text-black p-2  outline-none group-focus-within:ring group-focus-within:ring-blue-400 group-focus:outline-[2px] peer" name="rseatingtype" id="rseatingtype">
+                                <option class="" value="" disabled selected></option>
                                 <option value="privaterbusiness">Private Room: Business</option>
                                 <option value="privaterfamily">Private Room: Family</option>
                                 <option value="executivehall">Main hall</option>
                             </select>
+                            <label class="transition-all delay-75 ease-in-out absolute text-[15px] text-slate-500 top-5 left-7 group-focus-within:text-transparent peer-focus:top-[-1rem] peer-focus:left-[10px] peer-focus:text-sky-400 peer-focus:text-[0.75rem] peer-valid:top-[-1rem] peer-valid:left-[10px] peer-valid:text-sky-400 peer-valid:text-[0.75rem] peer-[&:not([value=''])]:top-[-1rem] peer-[&:not([value=' '])]:left-[10px] peer-[&:not([value=' '])]:text-sky-400 peer-[&:not([value=' '])]:text-[0.75rem]" for="rseatingtype">Seating Type:</label>
+                            
                         </div>
                         
 
-                        <div class="border relative flex flex-col gap-[2px] w-[80%] p-3 group  focus-within:bg-opacity-80">
-                            <label class="transition-all delay-75 ease-in-out absolute z-10 text-[15px] text-slate-500 top-5 left-7 group-focus-within:text-transparent" for="nofpeople">Number of People:</label>
-                            <input class="text-black p-2  outline-none group-focus-within:ring group-focus-within:ring-blue-400 group-focus:outline-[2px]" id="nofpeople" name="nofpeople" type="number">
+                        <div class=" relative flex flex-col gap-[2px] w-[80%] p-3 group  focus-within:bg-opacity-80">
+                        <input class="text-black p-2  outline-none group-focus-within:ring group-focus-within:ring-blue-400 group-focus:outline-[2px] peer" id="nofpeople" name="nofpeople" type="number" required>
+                        <label class="transition-all delay-75 ease-in-out absolute text-[15px] text-slate-500 top-5 left-7 group-focus-within:text-transparent peer-focus:top-[-1rem] peer-focus:left-[10px] peer-focus:text-sky-400 peer-focus:text-[0.75rem] peer-valid:top-[-1rem] peer-valid:left-[10px] peer-valid:text-sky-400 peer-valid:text-[0.75rem] peer-[&:not([value=' '])]:top-[-1rem] peer-[&:not([value=' '])]:left-[10px] peer-[&:not([value=' '])]:text-sky-400 peer-[&:not([value=' '])]:text-[0.75rem]" for="nofpeople">Number of People:</label>
+                            
                         </div>
                         
 
                         <!--Form Submission btn container-->
                         <div class="flex justify-center w-full">
-                            <button class="border p-5 w-[200px] bg-slate-100 text-slate-950 hover:bg-slate-950 hover:text-slate-100">Book Now</button>
+                            <input class="border p-5 w-[200px] bg-white text-slate-950 hover:bg-slate-950 hover:text-slate-100 hover:cursor-pointer" type="submit" value="Book Now" />
                         </div>
                     </form>
                 </div>
