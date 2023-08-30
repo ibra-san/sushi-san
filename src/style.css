@@ -30,3 +30,10 @@ font-family: 'Poppins', sans-serif;
     transition: 0.3s ease-in-out;
     
 }
+
+.selectedRS { 
+    top: -1rem;
+    left: 10px;
+    color: #4299E1;
+    font-size: 0.75rem;
+}

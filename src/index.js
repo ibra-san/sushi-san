@@ -7,8 +7,11 @@ const menuOpenBtn = document.querySelector("#menu-open");
 const menuCloseBtn = document.querySelector("#menu-close"); 
 
 // I am selecting the elements below in order to make sure the label disappears when there is text in the input field
-const labelElements = document.getElementsByTagName('label'); 
-const inputElements = document.getElementsByTagName('input'); 
+const selectBoxr = document.querySelector("#rlocation"); // Restaurant location selection menu targeted
+const labelR = document.querySelector("#rlocationlabel");
+const selectBoxs = document.querySelector("#seatType"); // Seating type selection menu targeted  
+const labelS = document.querySelector("#seatTypeLabel");
+
 
 menuOpenBtn.addEventListener("click", () => { 
     menu.classList.add("menu-appear");
@@ -45,6 +48,20 @@ window.onscroll = () => {
 
 
 /* Hiding placeholder if user data is there */
+selectBoxr.addEventListener("change", () => { 
+    if(selectBoxr.value !== "") { 
+        labelR.classList.add('selectedRS')
+    } else { 
+        labelR.classList.remove('selectedRS')
+    }
+})
 
+selectBoxs.addEventListener("change", () => { 
+    if(selectBoxs.value !== "") { 
+        labelS.classList.add('selectedRS')
+    } else { 
+        labelS.classList.remove('selectedRS')
+    }
+})
 
 
