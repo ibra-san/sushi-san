@@ -12,6 +12,8 @@ const labelR = document.querySelector("#rlocationlabel");
 const selectBoxs = document.querySelector("#rseatingtype"); // Seating type selection menu targeted  
 const labelS = document.querySelector("#rseatingtypeLabel");
 
+const nofpeople = document.querySelector("#nofpeople")
+
 
 menuOpenBtn.addEventListener("click", () => { 
     menu.classList.add("menu-appear");
@@ -63,5 +65,7 @@ selectBoxs.addEventListener("change", () => {
         labelS.classList.remove('selectedRS')
     }
 })
+
+
 
 
