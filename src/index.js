@@ -9,8 +9,8 @@ const menuCloseBtn = document.querySelector("#menu-close");
 // I am selecting the elements below in order to make sure the label disappears when there is text in the input field
 const selectBoxr = document.querySelector("#rlocation"); // Restaurant location selection menu targeted
 const labelR = document.querySelector("#rlocationlabel");
-const selectBoxs = document.querySelector("#seatType"); // Seating type selection menu targeted  
-const labelS = document.querySelector("#seatTypeLabel");
+const selectBoxs = document.querySelector("#rseatingtype"); // Seating type selection menu targeted  
+const labelS = document.querySelector("#rseatingtypeLabel");
 
 
 menuOpenBtn.addEventListener("click", () => { 
