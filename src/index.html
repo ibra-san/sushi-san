@@ -208,33 +208,37 @@
                 <!-- Reservation form conainer div-->
                 <div class=" flex flex-col items-center ">
                     
-                    <form class="   bg-black rounded-3xl flex flex-col items-center  p-5 gap-5 w-[90%] md:max-w-[500px] " action="">
-                        <h2 class="text-[20px]"><em>Book Your Spot at Sushi San</em></h2>
-                        <div class=" relative flex flex-col gap-[2px] w-[80%] p-3 group  focus-within:bg-opacity-80">
-                            <input class="rounded-sm text-black p-2 outline-none group-focus-within:ring group-focus-within:ring-blue-400 group-focus:outline-[2px] peer" 
-                            id="name" name="name" type="text" required>  
-                            <label class="transition-all delay-75 ease-in-out absolute text-[15px] text-slate-500 top-5 left-7 group-focus-within:text-transparent peer-focus:top-[-1rem] peer-focus:left-[10px] peer-focus:text-sky-400 peer-focus:text-[0.75rem] peer-valid:top-[-1rem] peer-valid:left-[10px] peer-valid:text-sky-400 peer-valid:text-[0.75rem] peer-[&:not([value=' '])]:top-[-1rem] peer-[&:not([value=' '])]:left-[10px] peer-[&:not([value=' '])]:text-sky-400 peer-[&:not([value=' '])]:text-[0.75rem]" for="name">Your Name 
+                    <form class="   bg-slate-950 rounded-3xl flex flex-col items-center  p-5 gap-2 w-[90%] md:max-w-[500px] " action="">
+                        <h2 class="text-[25px] font-bold">Book Your Spot at Sushi San</h2>
+                        <div class=" relative flex flex-col w-[80%] p-3 group">
+                            <label class=" text-sky-400 text-[1rem] mb-2" for="name">Your Name: 
                             </label>
+                            <input class="rounded-sm text-black p-2 outline-none group-focus-within:ring group-focus-within:ring-blue-400 group-focus:outline-[2px]" 
+                            id="name" name="name" type="text" required>  
                         </div>
                         
 
-                        <div class=" relative flex flex-col gap-[2px] w-[80%] p-3 group  focus-within:bg-opacity-80">
+                        <div class=" relative flex flex-col w-[80%] p-3 group  focus-within:bg-opacity-80">
+                            <label class=" text-sky-400 text-[1rem] mb-2" for="email">Email:</label>
                             <input class="rounded-sm text-black p-2  outline-none group-focus-within:ring group-focus-within:ring-blue-400 group-focus:outline-[2px] peer" id="email" name="email" type="email" required>
-                            <label class="transition-all delay-75 ease-in-out absolute text-[15px] text-slate-500 top-5 left-7 group-focus-within:text-transparent peer-focus:top-[-1rem] peer-focus:left-[10px] peer-focus:text-sky-400 peer-focus:text-[0.75rem] peer-valid:top-[-1rem] peer-valid:left-[10px] peer-valid:text-sky-400 peer-valid:text-[0.75rem] peer-[&:not([value=' '])]:top-[-1rem] peer-[&:not([value=' '])]:left-[10px] peer-[&:not([value=' '])]:text-sky-400 peer-[&:not([value=' '])]:text-[0.75rem]" for="email">Email</label>
+                            
                         </div>
                         
 
-                        <div class=" relative flex flex-col gap-[2px] w-[80%] p-3 group  focus-within:bg-opacity-80">
+                        <div class=" relative flex flex-col w-[80%] p-3 group  focus-within:bg-opacity-80">
+                            <label class="text-sky-400 text-[1rem] mb-2" for="pnumber">Phone Number:</label>
                             <input class="rounded-sm text-black p-2  outline-none group-focus-within:ring group-focus-within:ring-blue-400 group-focus:outline-[2px] peer" id="pnumber" name="pnumber" type="tel" required>
-                            <label class="transition-all delay-75 ease-in-out absolute text-[15px] text-slate-500 top-5 left-7 group-focus-within:text-transparent peer-focus:top-[-1rem] peer-focus:left-[10px] peer-focus:text-sky-400 peer-focus:text-[0.75rem] peer-valid:top-[-1rem] peer-valid:left-[10px] peer-valid:text-sky-400 peer-valid:text-[0.75rem] peer-[&:not([value=' '])]:top-[-1rem] peer-[&:not([value=' '])]:left-[10px] peer-[&:not([value=' '])]:text-sky-400 peer-[&:not([value=' '])]:text-[0.75rem]" for="pnumber">Phone Number</label>
+                           
                             
                         </div>
                         
 
-                        <div class=" relative flex flex-col gap-[2px] w-[80%] p-3 group  focus-within:bg-opacity-80">
-                            
-                            <select class="w-full h-full appearance-none rounded-sm text-black p-2  outline-none group-focus-within:ring group-focus-within:ring-blue-400 group-focus:outline-[2px] peer" name="rlocation" id="rlocation">
-                                <option value="" disabled selected></option>
+                        <div class=" relative flex flex-col w-[80%] p-3 group  focus-within:bg-opacity-80">
+
+                            <label class="text-sky-400 text-[1rem] mb-2" for="rlocation" id="rlocationlabel">Restaurant Location: </label>
+
+                            <select class="bg-white w-full h-full appearance-none rounded-sm p-2 text-black  outline-none group-focus-within:ring group-focus-within:ring-blue-400 group-focus:outline-[2px] font-['Poppins'] hover:cursor-pointer" name="rlocation" id="rlocation">
+                                <option class="font-['Poppins']" value="" disabled selected></option>
                                 <option value="tokyo">Tokyo</option>
                                 <option value="kyoto">Kyoto</option>
                                 <option value="fukukoa">Fukukoa</option>
@@ -242,27 +246,35 @@
                                 <option value="yokohama">Yokohama</option>
                             </select>
                             
-                            <label class="cursor-pointer transition-all delay-75 ease-in-out absolute text-[15px] text-slate-500 top-5 left-7 group-focus-within:text-transparent peer-focus:top-[-1rem] peer-focus:left-[10px] peer-focus:text-sky-400 peer-focus:text-[0.75rem]  " for="rlocation" id="rlocationlabel">Restaurant Location:</label>
+                            <span class="downarrow | absolute w-10 h-10 bg-slate-200 top-11 right-3 rounded-sm flex justify-center items-center pointer-events-none"><img width="20" height="20" src="https://img.icons8.com/fluency-systems-filled/48/chevron-down--v2.png" alt="chevron-down--v2"/></span>
                             
                         </div>
                         
 
-                        <div class=" relative flex flex-col gap-[2px] w-[80%] p-3 group  focus-within:bg-opacity-80">
-                           <select class=" appearance-none rounded-sm  text-black p-2  outline-none group-focus-within:ring group-focus-within:ring-blue-400 group-focus:outline-[2px] peer" name="rseatingtype" id="rseatingtype">
+                        <div class=" relative flex flex-col w-[80%] p-3 group focus-within:bg-opacity-80">
+
+                            <label class="text-sky-400 text-[1rem] mb-2 " for="rseatingtype" id="rseatingtypeLabel">Seating Type:</label>
+
+                           <select class="bg-white appearance-none rounded-sm  text-black p-2  outline-none group-focus-within:ring group-focus-within:ring-blue-400 group-focus:outline-[2px] peer hover:cursor-pointer" name="rseatingtype" id="rseatingtype">
                                 <option value="" disabled selected></option>
                                 <option value="privaterbusiness">Private Room: Business</option>
                                 <option value="privaterfamily">Private Room: Family</option>
                                 <option value="executivehall">Main hall</option>
                             </select>
-                            <label class="transition-all delay-75 ease-in-out absolute text-[15px] text-slate-500 top-5 left-7 group-focus-within:text-transparent peer-focus:top-[-1rem] peer-focus:left-[10px] peer-focus:text-sky-400 peer-focus:text-[0.75rem] " for="rseatingtype" id="rseatingtypeLabel">Seating Type:</label>
+                            
+                            <span class="downarrow | absolute w-10 h-10 bg-slate-200 top-11 right-3 rounded-sm flex justify-center items-center pointer-events-none"><img width="20" height="20" src="https://img.icons8.com/fluency-systems-filled/48/chevron-down--v2.png" alt="chevron-down--v2"/></span>
                             
                         </div>
                         
 
-                        <div class=" relative flex flex-col gap-[2px] w-[80%] p-3 group  focus-within:bg-opacity-80">
-                            <input class="rounded-sm text-black p-2  outline-none group-focus-within:ring group-focus-within:ring-blue-400 group-focus:outline-[2px] peer" id="nofpeople" name="nofpeople" type="number" required>
-                            <label class="transition-all delay-75 ease-in-out absolute text-[15px] text-slate-500 top-5 left-7 group-focus-within:text-transparent peer-focus:top-[-1rem] peer-focus:left-[10px] peer-focus:text-sky-400 peer-focus:text-[0.75rem] peer-valid:top-[-1rem] peer-valid:left-[10px] peer-valid:text-sky-400 peer-valid:text-[0.75rem] peer-[&:not([value=' '])]:top-[-1rem] peer-[&:not([value=' '])]:left-[10px] peer-[&:not([value=' '])]:text-sky-400 peer-[&:not([value=' '])]:text-[0.75rem]" for="nofpeople">Number of People:</label>
-                                
+                        <div class=" relative flex flex-col  w-[80%] p-3 group  focus-within:bg-opacity-80 mb-2">
+                            <label class="text-sky-400 text-[1rem] mb-2" for="nofpeople">Number of People:</label>
+                            <input class="rounded-sm text-black p-2  outline-none group-focus-within:ring group-focus-within:ring-blue-400 group-focus:outline-[2px] peer" id="nofpeople" name="nofpeople" type="number" required>  
+                        </div>
+
+                        <div class="relative flex flex-col  w-[80%] p-3 group  focus-within:bg-opacity-80 mb-2">
+                            <label class="text-sky-400 text-[1rem] mb-2" for="reservationtime">Date and time:</label>
+                            <input class="text-black p-2" type="datetime-local" id="reservationtime" name="reservationtime">
                         </div>
                         
 
@@ -275,18 +287,20 @@
             </div>
 
             <div>
-                <!-- Seat reservation section (optional)-->
-                <div>
-                    Seat reservation section
-                </div>
-            </div>
-
-            <div>
                 <!--Confirmation of reservation page -->
-                <div>
+                <div class="">
                    <div>
-                    <p>Thank you for your reservation. Please download the invitation card by clicking on the button below.</p>
-                    <button>Invitation Card</button>
+                    <h2 class="card-title">Sushi San: <span class="card-title-location"></span></h2>
+                    <h3 class="card-name">Dear James Doe,</h3>
+                    <div>Thank you for your reservation. Below are your reservation details: 
+                        <div class="name">James Doe</div>
+                        <div class="rlocation">Tokyo</div>
+                        <div class="rseating">Private Room: Family</div>
+                        <div class="noPeople">10</div>
+                        <div class="datetime">Thursday, 20 2023 @ 08:00</div>
+                    </div>
+                    <div> Thank you again for your reservation. Looking forward to serving you.</div>
+                    <button>Download Invitation Card</button>
                    </div>
                 </div>
             </div>

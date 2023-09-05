@@ -31,11 +31,8 @@ font-family: 'Poppins', sans-serif;
     
 }
 
-.selectedRS { 
-    top: -1rem;
-    left: 10px;
-    color: #4299E1;
-    font-size: 0.75rem;
+* { 
+    font-family: 'Poppins', sans-serif;
 }
 
 /* Chrome, Safari, Edge, Opera */
