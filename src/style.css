@@ -42,6 +42,14 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
+
+::-webkit-date-edit-year-field:not([aria-valuenow]),
+::-webkit-date-edit-month-field:not([aria-valuenow]),
+::-webkit-date-edit-day-field:not([aria-valuenow]) {
+    color: transparent;
+}
+
+
 /* Firefox */
 input[type=number] {
   -moz-appearance: textfield;
