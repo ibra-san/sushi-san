@@ -272,9 +272,23 @@
                             <input class="rounded-sm text-black p-2  outline-none group-focus-within:ring group-focus-within:ring-blue-400 group-focus:outline-[2px] peer" id="nofpeople" name="nofpeople" type="number" required>  
                         </div>
 
-                        <div class="relative flex flex-col  w-[80%] p-3 group  focus-within:bg-opacity-80 mb-2">
-                            <label class="text-sky-400 text-[1rem] mb-2" for="reservationtime">Date and time:</label>
-                            <input class="text-black p-2 w-full rounded-sm cursor-pointer outline-none group-focus-within:ring group-focus-within:ring-blue-400 group-focus:outline-[2px]" type="date" id="reservationtime" name="reservationtime">
+                        <p class=" w-[80%] p-3 text-[1rem] text-blue-400 mb-2">Reservation Date: </p>
+
+                        <div class="relative flex flex-col  w-[75%] p-3 group  focus-within:bg-opacity-80 mb-2 bg-white text-black rounded-sm cursor-pointer">
+                            
+
+                            <div class="selected-date | w-full h-full flex justify-center items-center text-[1.3rem]">30/07/2023</div>
+
+                            <div class="dates | hidden">
+
+                                <div class="month">
+                                    <div class="arrows prev-mth">&lt;</div>
+                                    <div class="mth"></div>
+                                    <div class="arrows next-mth">&gt;</div>
+                                </div>
+
+                                <div class="days"></div>
+                            </div>
                         </div>
                         
 
