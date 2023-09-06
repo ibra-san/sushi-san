@@ -111,19 +111,16 @@ function goToNextMonth() {
 
 function goToPrevMonth () {
     month--; 
-    if (month+year !== date.getMonth()+date.getYear()) { 
+
         if (month < 0) { 
             month = 11; 
             year--;
-        }
+        } 
 
-        monthElement.textContent = months[month]+ " " + year;
-    } else { 
-        console.log("No Later Date")
+            monthElement.textContent = months[month]+ " " + year;
+
+       
     }
-    
-    
-}
 
 function toggleDatePicker(e) { 
     if(!checkEventPathForID(e.composedPath())) { 
