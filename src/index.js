@@ -68,4 +68,38 @@ selectBoxs.addEventListener("change", () => {
 
 
 
+// JS for datepicker section -----------
+
+const DatePickerElement = document.querySelector("#date-picker"); // Date picker container
+const SelectedDateElement = document.querySelector("#selected-date"); // The selected date container
+const DatesElement = document.querySelector("#dates"); // The calender container
+
+// EVENT LISTENERS 
+DatePickerElement.addEventListener("click", toggleDatePicker); 
+
+// FUNCTIONS 
+
+function toggleDatePicker(e) { 
+    if(!checkEventPathForID(e.composedPath())) { 
+        DatesElement.classList.toggle("hidden"); 
+        DatePickerElement.classList.toggle("hover:bg-slate-200");
+    }
+   
+}
+
+
+// HELPER FUNCTIONS
+function checkEventPathForID (path) {
+    
+    for(let i=0; i < path.length; i++){
+        if(path[i].id==='dates') { 
+            return true;
+        }
+    }
+
+    return false;
+}
+
+
+
 
