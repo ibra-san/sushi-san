@@ -70,19 +70,65 @@ selectBoxs.addEventListener("change", () => {
 
 // JS for datepicker section -----------
 
-const DatePickerElement = document.querySelector("#date-picker"); // Date picker container
-const SelectedDateElement = document.querySelector("#selected-date"); // The selected date container
-const DatesElement = document.querySelector("#dates"); // The calender container
+const datePickerElement = document.querySelector("#date-picker"); // Date picker container
+const selectedDateElement = document.querySelector("#selected-date"); // The selected date container
+const datesElement = document.querySelector("#dates"); // The calender container
+const monthElementContainer = document.querySelector("#month"); // The month container
+const monthElement = document.querySelector(".mth"); // The month text in the selected area
+const prevMonth = document.querySelector(".prev-mth"); // Previous month arrow
+const nextMonth = document.querySelector(".next-mth"); // Previous month arrow
 
+const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+
+let date = new Date(); // Gives you todays date
+let day = date.getDate(); 
+let month = date.getMonth(); 
+let year = date.getFullYear(); 
+
+let selectedDate = date; 
+let selectedDay = day;
+let selectedMonth = month; 
+let selectedYear = year; 
+
+
+monthElement.textContent = months[month]+ " "+ year;
 // EVENT LISTENERS 
-DatePickerElement.addEventListener("click", toggleDatePicker); 
+datePickerElement.addEventListener("click", toggleDatePicker); 
+nextMonth.addEventListener("click", goToNextMonth); 
+prevMonth.addEventListener("click", goToPrevMonth); 
 
 // FUNCTIONS 
 
+function goToNextMonth() { 
+    month++; 
+    if (month > 11) { 
+        month = 0; 
+        year++;
+    }
+
+    monthElement.textContent = months[month]+ " " + year;
+}
+
+function goToPrevMonth () {
+    month--; 
+    if (month+year !== date.getMonth()+date.getYear()) { 
+        if (month < 0) { 
+            month = 11; 
+            year--;
+        }
+
+        monthElement.textContent = months[month]+ " " + year;
+    } else { 
+        console.log("No Later Date")
+    }
+    
+    
+}
+
 function toggleDatePicker(e) { 
     if(!checkEventPathForID(e.composedPath())) { 
-        DatesElement.classList.toggle("hidden"); 
-        DatePickerElement.classList.toggle("hover:bg-slate-200");
+        datesElement.classList.toggle("hidden"); 
+        datePickerElement.classList.toggle("hover:bg-slate-200");
     }
    
 }
