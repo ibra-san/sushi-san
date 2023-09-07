@@ -80,6 +80,8 @@ const nextMonth = document.querySelector(".next-mth"); // Previous month arrow
 
 const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
 
+const dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]; 
+
 let date = new Date(); // Gives you todays date
 let day = date.getDate(); 
 let month = date.getMonth(); 
@@ -90,8 +92,10 @@ let selectedDay = day;
 let selectedMonth = month; 
 let selectedYear = year; 
 
-
+ console.log(day);
 monthElement.textContent = months[month]+ " "+ year;
+selectedDateElement.textContent = formateDate(date);
+
 // EVENT LISTENERS 
 datePickerElement.addEventListener("click", toggleDatePicker); 
 nextMonth.addEventListener("click", goToNextMonth); 
@@ -105,21 +109,16 @@ function goToNextMonth() {
         month = 0; 
         year++;
     }
-
     monthElement.textContent = months[month]+ " " + year;
 }
 
 function goToPrevMonth () {
     month--; 
-
-        if (month < 0) { 
+    if (month < 0) { 
             month = 11; 
             year--;
-        } 
-
-            monthElement.textContent = months[month]+ " " + year;
-
-       
+    } 
+    monthElement.textContent = months[month]+ " " + year;  
     }
 
 function toggleDatePicker(e) { 
@@ -144,5 +143,21 @@ function checkEventPathForID (path) {
 }
 
 
+function formateDate (d) { 
+    let day = d.getDate(); 
+    
+    if(day < 10) { 
+        day="0"+day;
+    }
+
+    let month = d.getMonth()+1; 
+
+    if (month < 10) { 
+        month = "0"+ month
+    }
+    let year = d.getFullYear(); 
+
+    return (day+" / " + month + " / " + year)
+}
 
 
