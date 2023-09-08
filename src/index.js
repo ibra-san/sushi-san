@@ -77,6 +77,7 @@ const monthElementContainer = document.querySelector("#month"); // The month con
 const monthElement = document.querySelector(".mth"); // The month text in the selected area
 const prevMonth = document.querySelector(".prev-mth"); // Previous month arrow
 const nextMonth = document.querySelector(".next-mth"); // Previous month arrow
+const daysElement = document.querySelector("#days"); // This is the days container
 
 const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
 
@@ -92,9 +93,13 @@ let selectedDay = day;
 let selectedMonth = month; 
 let selectedYear = year; 
 
- console.log(day);
 monthElement.textContent = months[month]+ " "+ year;
 selectedDateElement.textContent = formateDate(date);
+
+
+renderDate(month);
+
+
 
 // EVENT LISTENERS 
 datePickerElement.addEventListener("click", toggleDatePicker); 
@@ -110,6 +115,8 @@ function goToNextMonth() {
         year++;
     }
     monthElement.textContent = months[month]+ " " + year;
+
+    renderDate(month);
 }
 
 function goToPrevMonth () {
@@ -119,7 +126,9 @@ function goToPrevMonth () {
             year--;
     } 
     monthElement.textContent = months[month]+ " " + year;  
-    }
+
+    renderDate(month);
+}
 
 function toggleDatePicker(e) { 
     if(!checkEventPathForID(e.composedPath())) { 
@@ -129,6 +138,30 @@ function toggleDatePicker(e) {
    
 }
 
+
+function populateDate (numberOfDays) { 
+    daysElement.innerHTML = "";
+
+    for(let i=0; i < numberOfDays; i++) { 
+        const dayElement = document.createElement("div"); 
+        dayElement.classList.add('day');
+
+        dayElement.textContent=i+1;
+        daysElement.appendChild(dayElement);
+    }
+
+}
+
+function renderDate (month) { 
+
+    if ((month)%2 === 0 ) { 
+        let numberOfDays = 30; 
+        populateDate(numberOfDays);
+    } else { 
+        let numberOfDays = 31; 
+        populateDate(numberOfDays);
+    }
+}
 
 // HELPER FUNCTIONS
 function checkEventPathForID (path) {
