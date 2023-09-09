@@ -14,6 +14,16 @@ const labelS = document.querySelector("#rseatingtypeLabel");
 
 const nofpeople = document.querySelector("#nofpeople")
 
+// JS for datepicker section -----------
+const datePickerElement = document.querySelector("#date-picker"); // Date picker container
+const selectedDateElement = document.querySelector("#selected-date"); // The selected date container
+const datesElement = document.querySelector("#dates"); // The calender container
+const monthElementContainer = document.querySelector("#month"); // The month container
+const monthElement = document.querySelector(".mth"); // The month text in the selected area
+const prevMonth = document.querySelector(".prev-mth"); // Previous month arrow
+const nextMonth = document.querySelector(".next-mth"); // Previous month arrow
+const daysElement = document.querySelector("#days"); // This is the days container  
+
 
 menuOpenBtn.addEventListener("click", () => { 
     menu.classList.add("menu-appear");
@@ -70,14 +80,8 @@ selectBoxs.addEventListener("change", () => {
 
 // JS for datepicker section -----------
 
-const datePickerElement = document.querySelector("#date-picker"); // Date picker container
-const selectedDateElement = document.querySelector("#selected-date"); // The selected date container
-const datesElement = document.querySelector("#dates"); // The calender container
-const monthElementContainer = document.querySelector("#month"); // The month container
-const monthElement = document.querySelector(".mth"); // The month text in the selected area
-const prevMonth = document.querySelector(".prev-mth"); // Previous month arrow
-const nextMonth = document.querySelector(".next-mth"); // Previous month arrow
-const daysElement = document.querySelector("#days"); // This is the days container
+
+
 
 const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
 
@@ -146,6 +150,25 @@ function populateDate (numberOfDays) {
         const dayElement = document.createElement("div"); 
         dayElement.classList.add('day');
 
+        if(selectedDay === i+1 && selectedMonth === month && selectedYear === year) { 
+            dayElement.classList.add('selectedDay')
+        }
+
+        dayElement.addEventListener("click", function () { 
+            selectedDate = new Date(year + '-' + (month + 1) + '-' + (i + 1)); 
+            selectedDay = (i + 1);
+            selectedMonth  = month; 
+            selectedYear = year;
+
+            
+
+            dayElement.classList.add("selectedDay");
+            selectedDateElement.textContent = formateDate(selectedDate);
+            selectedDateElement.dataset.value = selectedDate;
+
+            populateDate(numberOfDays);
+        })
+
         dayElement.textContent=i+1;
         daysElement.appendChild(dayElement);
     }
@@ -158,8 +181,14 @@ function renderDate (month) {
         let numberOfDays = 30; 
         populateDate(numberOfDays);
     } else { 
-        let numberOfDays = 31; 
-        populateDate(numberOfDays);
+        if(month === 1) { 
+            let numberOfDays = 28; 
+            populateDate(numberOfDays);
+        } else { 
+            let numberOfDays = 31; 
+            populateDate(numberOfDays);
+        }
+       
     }
 }
 
