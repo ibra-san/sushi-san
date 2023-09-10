@@ -154,8 +154,20 @@ function populateDate (numberOfDays) {
             dayElement.classList.add('selectedDay')
         }
 
+        if(selectedYear > year ) { 
+            dayElement.classList.add("text-slate-200")
+        } 
+
+        if (selectedYear === year && selectedMonth > month ) { 
+            dayElement.classList.add("text-slate-200")
+        }
+
+        if (selectedYear === year && selectedMonth === month && selectedDay > (i+1)) { 
+            dayElement.classList.add("text-slate-200")
+        }
+
         dayElement.addEventListener("click", function () { 
-            selectedDate = new Date(year + '-' + (month + 1) + '-' + (i + 1)); 
+            selectedDate = new Date(year, month, (i+1)); 
             selectedDay = (i + 1);
             selectedMonth  = month; 
             selectedYear = year;
@@ -206,8 +218,9 @@ function checkEventPathForID (path) {
 
 
 function formateDate (d) { 
+
     let day = d.getDate(); 
-    
+
     if(day < 10) { 
         day="0"+day;
     }
