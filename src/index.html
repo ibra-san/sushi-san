@@ -226,8 +226,9 @@
                         
 
                         <div class=" relative flex flex-col w-[80%] p-3 group  focus-within:bg-opacity-80">
-                            <label class="text-sky-400 text-[1rem] mb-2" for="pnumber">Phone Number:</label>
-                            <input class="rounded-sm text-black p-2  outline-none group-focus-within:ring group-focus-within:ring-blue-400 group-focus:outline-[2px] peer" id="pnumber" name="pnumber" type="tel" required>
+                            <label class="text-sky-400 text-[1rem] mb-2" for="pnumber">Phone No.:</label>
+                            <span id="pnumber-valid" class="absolute left-[105px] text-red-400 font-extrabold">Please enter a valid Number</span>
+                            <input class="rounded-sm text-black p-2  outline-none group-focus-within:ring group-focus-within:ring-blue-400 group-focus:outline-[2px] peer" id="pnumber" name="pnumber" type="tel" maxlength="15" required>
                            
                             
                         </div>
@@ -268,7 +269,8 @@
                         
 
                         <div class=" relative flex flex-col  w-[80%] p-3 group  focus-within:bg-opacity-80 mb-2">
-                            <label class="text-sky-400 text-[1rem] mb-2" for="nofpeople">Number of People:</label>
+                            <label class="text-sky-400 text-[1rem] mb-2" for="nofpeople">No. Of People:</label>
+                            <span id="nofpeople-valid" class="absolute left-[130px] text-red-400 font-extrabold">Max No. Of People = 100</span>
                             <input class="rounded-sm text-black p-2  outline-none group-focus-within:ring group-focus-within:ring-blue-400 group-focus:outline-[2px] peer" id="nofpeople" name="nofpeople" type="number" required>  
                         </div>
 

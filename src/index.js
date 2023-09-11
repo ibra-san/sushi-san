@@ -24,6 +24,10 @@ const prevMonth = document.querySelector(".prev-mth"); // Previous month arrow
 const nextMonth = document.querySelector(".next-mth"); // Previous month arrow
 const daysElement = document.querySelector("#days"); // This is the days container  
 
+// phone number validation: 
+const pnumberInput = document.querySelector("#pnumber"); 
+const pnumberValid = document.querySelector("#pnumber-valid");
+
 
 menuOpenBtn.addEventListener("click", () => { 
     menu.classList.add("menu-appear");
@@ -146,39 +150,61 @@ function toggleDatePicker(e) {
 function populateDate (numberOfDays) { 
     daysElement.innerHTML = "";
 
+    todayDate = new Date();
+    todayDay = todayDate.getDate(); 
+    todayMonth = todayDate.getMonth(); 
+    todayYear = todayDate.getFullYear(); 
+
     for(let i=0; i < numberOfDays; i++) { 
         const dayElement = document.createElement("div"); 
         dayElement.classList.add('day');
+
+        if(todayDay === i+1 && todayMonth === month && todayYear === year) { 
+            dayElement.classList.add('todayDate')
+        }
+
+        if (year < todayYear) { 
+            dayElement.classList.add("text-slate-200");
+        } else if (year === todayYear) { 
+            if(month < todayMonth) { 
+                dayElement.classList.add("text-slate-200");
+            } else if (month === todayMonth) { 
+                if((i+1) < todayDay) { 
+                    dayElement.classList.add("text-slate-200");
+                }
+            }
+        }
 
         if(selectedDay === i+1 && selectedMonth === month && selectedYear === year) { 
             dayElement.classList.add('selectedDay')
         }
 
-        if(selectedYear > year ) { 
-            dayElement.classList.add("text-slate-200")
-        } 
-
-        if (selectedYear === year && selectedMonth > month ) { 
-            dayElement.classList.add("text-slate-200")
-        }
-
-        if (selectedYear === year && selectedMonth === month && selectedDay > (i+1)) { 
-            dayElement.classList.add("text-slate-200")
-        }
-
+        
         dayElement.addEventListener("click", function () { 
-            selectedDate = new Date(year, month, (i+1)); 
-            selectedDay = (i + 1);
-            selectedMonth  = month; 
-            selectedYear = year;
 
+            if (year === todayYear) { 
+                if(month >= todayMonth) { 
+                    if((i+1)>= todayDay) { 
+                        selectedDate = new Date(year, month, (i+1)); 
+                        selectedDay = (i + 1);
+                        selectedMonth  = month; 
+                        selectedYear = year;
+                        selectedDateElement.textContent = formateDate(selectedDate);
+                        selectedDateElement.dataset.value = selectedDate;
+                        populateDate(numberOfDays);
+                    }
+                }
+            } else if (year > todayYear) { 
+
+                        selectedDate = new Date(year, month, (i+1)); 
+                        selectedDay = (i + 1);
+                        selectedMonth  = month; 
+                        selectedYear = year;
+                        selectedDateElement.textContent = formateDate(selectedDate);
+                        selectedDateElement.dataset.value = selectedDate;
+                        populateDate(numberOfDays);
+            }
             
-
-            dayElement.classList.add("selectedDay");
-            selectedDateElement.textContent = formateDate(selectedDate);
-            selectedDateElement.dataset.value = selectedDate;
-
-            populateDate(numberOfDays);
         })
 
         dayElement.textContent=i+1;
@@ -236,3 +262,10 @@ function formateDate (d) {
 }
 
 
+/* Form validation */
+
+
+// phone Number Validation
+
+let pnumberInputValue = pnumberInput.value;
+console.log(pnumberInputValue.value);
