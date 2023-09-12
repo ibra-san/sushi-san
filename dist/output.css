@@ -1108,52 +1108,12 @@ video {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.placeholder\:text-ellipsis::-moz-placeholder {
-  text-overflow: ellipsis;
-}
-
-.placeholder\:text-ellipsis::placeholder {
-  text-overflow: ellipsis;
-}
-
-.placeholder\:text-\[0\.5rem\]::-moz-placeholder {
-  font-size: 0.5rem;
-}
-
-.placeholder\:text-\[0\.5rem\]::placeholder {
-  font-size: 0.5rem;
-}
-
-.placeholder\:text-\[0\.75rem\]::-moz-placeholder {
-  font-size: 0.75rem;
-}
-
-.placeholder\:text-\[0\.75rem\]::placeholder {
-  font-size: 0.75rem;
-}
-
-.placeholder\:text-\[0\.90rem\]::-moz-placeholder {
-  font-size: 0.90rem;
-}
-
-.placeholder\:text-\[0\.90rem\]::placeholder {
-  font-size: 0.90rem;
-}
-
 .placeholder\:text-\[0\.80rem\]::-moz-placeholder {
   font-size: 0.80rem;
 }
 
 .placeholder\:text-\[0\.80rem\]::placeholder {
   font-size: 0.80rem;
-}
-
-.placeholder\:text-\[0\.8rem\]::-moz-placeholder {
-  font-size: 0.8rem;
-}
-
-.placeholder\:text-\[0\.8rem\]::placeholder {
-  font-size: 0.8rem;
 }
 
 .focus-within\:bg-opacity-80:focus-within {

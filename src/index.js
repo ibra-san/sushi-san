@@ -264,11 +264,19 @@ function formateDate (d) {
 /* Form validation */
 
 
-bookBtn.addEventListener("click", function(e) { 
-    e.preventDefault();
-    phoneNumberValidation();
-    numberOfPeopleValidation();
-    collectingValues();
+bookBtn.addEventListener("click", function() { 
+
+    let correctPhoneNo = phoneNumberValidation(); 
+    let correctPeopleNo = numberOfPeopleValidation(); 
+
+    if(correctPeopleNo === false || correctPhoneNo === false) { 
+        
+    } else { 
+        collectingValues();
+    }
+    
+    
+    
     
 } )
 
@@ -312,8 +320,7 @@ function numberOfPeopleValidation() {
 function collectingValues() { 
 
     let name = nameInput.value; 
-    let email = emailInput.value;
-    let phoneNo = phoneNumberValidation(); 
+    let email = emailInput.value; 
     let restaurantL = rlocationInput.value;
     let seatingType = rseatingtypeInput.value;
     let numberPeople = numberOfPeopleValidation(); 
