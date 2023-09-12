@@ -213,22 +213,22 @@
                         <div class=" relative flex flex-col w-[80%] p-3 group">
                             <label class=" text-sky-400 text-[1rem] mb-2" for="name">Your Name: 
                             </label>
-                            <input class="rounded-sm text-black p-2 outline-none group-focus-within:ring group-focus-within:ring-blue-400 group-focus:outline-[2px]" 
-                            id="name" name="name" type="text" required>  
+                            <input class="rounded-sm text-black p-2 outline-none group-focus-within:ring group-focus-within:ring-blue-400 group-focus:outline-[2px] placeholder:text-[0.80rem]" 
+                            id="name" name="name" type="text" placeholder="e.g: James Doe" required>  
                         </div>
                         
 
                         <div class=" relative flex flex-col w-[80%] p-3 group  focus-within:bg-opacity-80">
                             <label class=" text-sky-400 text-[1rem] mb-2" for="email">Email:</label>
-                            <input class="rounded-sm text-black p-2  outline-none group-focus-within:ring group-focus-within:ring-blue-400 group-focus:outline-[2px] peer" id="email" name="email" type="email" required>
+                            <input class="rounded-sm text-black p-2  outline-none group-focus-within:ring group-focus-within:ring-blue-400 group-focus:outline-[2px] peer placeholder:text-[0.80rem]" id="email" name="email" placeholder="e.g: jamesdoe@gmail.com" type="email" required>
                             
                         </div>
                         
 
                         <div class=" relative flex flex-col w-[80%] p-3 group  focus-within:bg-opacity-80">
                             <label class="text-sky-400 text-[1rem] mb-2" for="pnumber">Phone No.:</label>
-                            <span id="pnumber-valid" class="absolute left-[105px] text-red-400 font-extrabold">Please enter a valid Number</span>
-                            <input class="rounded-sm text-black p-2  outline-none group-focus-within:ring group-focus-within:ring-blue-400 group-focus:outline-[2px] peer" id="pnumber" name="pnumber" type="tel" maxlength="15" required>
+                            <span id="pnumber-valid" class="absolute left-[105px] text-red-400 font-extrabold"></span>
+                            <input class="rounded-sm text-black p-2  outline-none group-focus-within:ring group-focus-within:ring-blue-400 group-focus:outline-[2px] peer placeholder:text-[0.80rem]" id="pnumber" name="pnumber" type="tel" maxlength="10" placeholder="e.g: 0123456789" required>
                            
                             
                         </div>
@@ -270,8 +270,8 @@
 
                         <div class=" relative flex flex-col  w-[80%] p-3 group  focus-within:bg-opacity-80 mb-2">
                             <label class="text-sky-400 text-[1rem] mb-2" for="nofpeople">No. Of People:</label>
-                            <span id="nofpeople-valid" class="absolute left-[130px] text-red-400 font-extrabold">Max No. Of People = 100</span>
-                            <input class="rounded-sm text-black p-2  outline-none group-focus-within:ring group-focus-within:ring-blue-400 group-focus:outline-[2px] peer" id="nofpeople" name="nofpeople" type="number" required>  
+                            <span id="nofpeople-valid" class="absolute left-[130px] text-red-400 font-extrabold"></span>
+                            <input class="rounded-sm text-black p-2  outline-none group-focus-within:ring group-focus-within:ring-blue-400 group-focus:outline-[2px] peer placeholder:text-[0.80rem]" id="nofpeople" name="nofpeople" type="number" placeholder="e.g: 3" required>  
                         </div>
 
                         <p class=" w-[80%] pl-3 pr-3 text-[1rem] text-blue-400">Reservation Date: </p>
@@ -297,7 +297,7 @@
 
                         <!--Form Submission btn container-->
                         <div class="flex justify-center w-full">
-                            <input class="border p-5 w-[200px] bg-white text-slate-950 hover:bg-slate-950 hover:text-slate-100 hover:cursor-pointer" type="submit" value="Book Now" />
+                            <input class="border p-5 w-[200px] bg-white text-slate-950 hover:bg-slate-950 hover:text-slate-100 hover:cursor-pointer" type="submit" value="Book Now" id="book-btn" />
                         </div>
                     </form>
                 </div>

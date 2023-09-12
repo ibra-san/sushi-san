@@ -6,15 +6,9 @@ const menuItems = document.querySelector("#menu-items")
 const menuOpenBtn = document.querySelector("#menu-open"); 
 const menuCloseBtn = document.querySelector("#menu-close"); 
 
-// I am selecting the elements below in order to make sure the label disappears when there is text in the input field
-const selectBoxr = document.querySelector("#rlocation"); // Restaurant location selection menu targeted
-const labelR = document.querySelector("#rlocationlabel");
-const selectBoxs = document.querySelector("#rseatingtype"); // Seating type selection menu targeted  
-const labelS = document.querySelector("#rseatingtypeLabel");
 
-const nofpeople = document.querySelector("#nofpeople")
 
-// JS for datepicker section -----------
+// Datepicker section -----------
 const datePickerElement = document.querySelector("#date-picker"); // Date picker container
 const selectedDateElement = document.querySelector("#selected-date"); // The selected date container
 const datesElement = document.querySelector("#dates"); // The calender container
@@ -27,6 +21,13 @@ const daysElement = document.querySelector("#days"); // This is the days contain
 // phone number validation: 
 const pnumberInput = document.querySelector("#pnumber"); 
 const pnumberValid = document.querySelector("#pnumber-valid");
+
+// no. of people validation: 
+const nofpeopleInput = document.querySelector("#nofpeople");
+const nofpeopleValid = document.querySelector("#nofpeople-valid");
+
+// Form Submission: 
+const bookBtn = document.querySelector("#book-btn"); 
 
 
 menuOpenBtn.addEventListener("click", () => { 
@@ -63,22 +64,6 @@ window.onscroll = () => {
 }
 
 
-/* Hiding placeholder if user data is there */
-selectBoxr.addEventListener("change", () => { 
-    if(selectBoxr.value !== "") { 
-        labelR.classList.add('selectedRS')
-    } else { 
-        labelR.classList.remove('selectedRS')
-    }
-})
-
-selectBoxs.addEventListener("change", () => { 
-    if(selectBoxs.value !== "") { 
-        labelS.classList.add('selectedRS')
-    } else { 
-        labelS.classList.remove('selectedRS')
-    }
-})
 
 
 
@@ -265,7 +250,47 @@ function formateDate (d) {
 /* Form validation */
 
 
-// phone Number Validation
+bookBtn.addEventListener("click", function(e) { 
+    e.preventDefault();
+    phoneNumberValidation();
+    numberOfPeopleValidation();
+    
+} )
 
-let pnumberInputValue = pnumberInput.value;
-console.log(pnumberInputValue.value);
+
+
+// phone Number Validation functions and helper functions
+
+function phoneNumberValidation () { 
+    let phoneValidation = /^\d{10}$/; 
+
+    if(pnumberInput.value.match(phoneValidation)) { 
+        pnumberValid.textContent="";
+        console.log("valid phone number");
+        return true;
+    }else if (pnumberInput.value === "") { 
+        pnumberValid.textContent="Please enter a PH number";
+        return false;
+    } else { 
+        pnumberValid.textContent = "Please enter a valid Number";
+        return false;
+    }
+}
+
+// Number of people validation
+
+function numberOfPeopleValidation() { 
+    let maxNo = 100; 
+
+    if(nofpeopleInput.value > 100) { 
+        nofpeopleValid.textContent="Max No. Of People = 100"; 
+        return false; 
+    } else if (nofpeopleInput.value < 0 ) { 
+        nofpeopleInput.value = 0;
+        nofpeopleValid.textContent="Enter a No. between 0 & 100";
+        return false; 
+    } else 
+        nofpeopleValid.textContent='';
+        return true;
+
+}
