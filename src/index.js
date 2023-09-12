@@ -7,6 +7,7 @@ const menuOpenBtn = document.querySelector("#menu-open");
 const menuCloseBtn = document.querySelector("#menu-close"); 
 
 
+/*Form section */
 
 // Datepicker section -----------
 const datePickerElement = document.querySelector("#date-picker"); // Date picker container
@@ -18,17 +19,30 @@ const prevMonth = document.querySelector(".prev-mth"); // Previous month arrow
 const nextMonth = document.querySelector(".next-mth"); // Previous month arrow
 const daysElement = document.querySelector("#days"); // This is the days container  
 
-// phone number validation: 
+const nameInput = document.querySelector("#name");
+
+const emailInput = document.querySelector("#email"); 
+
+const rlocationInput = document.querySelector("#rlocation");
+
+const rseatingtypeInput = document.querySelector("#rseatingtype"); 
+
 const pnumberInput = document.querySelector("#pnumber"); 
 const pnumberValid = document.querySelector("#pnumber-valid");
 
-// no. of people validation: 
 const nofpeopleInput = document.querySelector("#nofpeople");
 const nofpeopleValid = document.querySelector("#nofpeople-valid");
 
-// Form Submission: 
+// Form Submission and value collection: 
 const bookBtn = document.querySelector("#book-btn"); 
 
+const reserveRLocation = document.querySelector(".card-title-location"); 
+const reserveName = document.querySelector(".card-name"); 
+const reserveEmail = document.querySelector(".email");
+const reserveLocation = document.querySelector(".rlocation"); 
+const reserveSeating = document.querySelector(".rseating"); 
+const reserveNoPeople = document.querySelector(".noPeople"); 
+const reservedate = document.querySelector(".datetime");
 
 menuOpenBtn.addEventListener("click", () => { 
     menu.classList.add("menu-appear");
@@ -254,6 +268,7 @@ bookBtn.addEventListener("click", function(e) {
     e.preventDefault();
     phoneNumberValidation();
     numberOfPeopleValidation();
+    collectingValues();
     
 } )
 
@@ -261,13 +276,13 @@ bookBtn.addEventListener("click", function(e) {
 
 // phone Number Validation functions and helper functions
 
-function phoneNumberValidation () { 
+function phoneNumberValidation() { 
     let phoneValidation = /^\d{10}$/; 
 
     if(pnumberInput.value.match(phoneValidation)) { 
         pnumberValid.textContent="";
         console.log("valid phone number");
-        return true;
+        return pnumberInput.value;
     }else if (pnumberInput.value === "") { 
         pnumberValid.textContent="Please enter a PH number";
         return false;
@@ -280,7 +295,6 @@ function phoneNumberValidation () {
 // Number of people validation
 
 function numberOfPeopleValidation() { 
-    let maxNo = 100; 
 
     if(nofpeopleInput.value > 100) { 
         nofpeopleValid.textContent="Max No. Of People = 100"; 
@@ -291,6 +305,27 @@ function numberOfPeopleValidation() {
         return false; 
     } else 
         nofpeopleValid.textContent='';
-        return true;
+        return nofpeopleInput.value;
+
+}
+
+function collectingValues() { 
+
+    let name = nameInput.value; 
+    let email = emailInput.value;
+    let phoneNo = phoneNumberValidation(); 
+    let restaurantL = rlocationInput.value;
+    let seatingType = rseatingtypeInput.value;
+    let numberPeople = numberOfPeopleValidation(); 
+   
+
+    reserveRLocation.textContent=restaurantL;
+    reserveName.textContent=name;
+    reserveLocation.textContent=restaurantL; 
+    reserveEmail.textContent=email;
+    reserveSeating.textContent=seatingType; 
+    reserveNoPeople.textContent=numberPeople;
+    reservedate.textContent=selectedDateElement.dataset.value;
+
 
 }
