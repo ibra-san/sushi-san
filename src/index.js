@@ -44,6 +44,15 @@ const reserveSeating = document.querySelector(".rseating");
 const reserveNoPeople = document.querySelector(".noPeople"); 
 const reservedate = document.querySelector(".datetime");
 
+// form validation ----------
+const nameValid = document.querySelector("#name-valid"); 
+const emailValid = document.querySelector("#email-valid"); 
+const phoneValid = document.querySelector("#phone-valid");
+const rlocationValid = document.querySelector("#rlocation-valid");
+const rseatingValid = document.querySelector("#rseating-valid");
+const dateValid = document.querySelector("#date-valid"); 
+
+
 menuOpenBtn.addEventListener("click", () => { 
     menu.classList.add("menu-appear");
 })
@@ -268,6 +277,10 @@ bookBtn.addEventListener("click", function() {
 
     let correctPhoneNo = phoneNumberValidation(); 
     let correctPeopleNo = numberOfPeopleValidation(); 
+    nameValidation();
+    emailValidation();
+    rlocationValidation();
+    rseatingValidation();
 
     if(correctPeopleNo === false || correctPhoneNo === false) { 
         
@@ -307,7 +320,11 @@ function numberOfPeopleValidation() {
     if(nofpeopleInput.value > 100) { 
         nofpeopleValid.textContent="Max No. Of People = 100"; 
         return false; 
-    } else if (nofpeopleInput.value < 0 ) { 
+    } else if (nofpeopleInput.value === "") { 
+        nofpeopleValid.textContent="Enter a No. between 0 & 100";
+        return false;
+    }
+     else if (nofpeopleInput.value < 0 ) { 
         nofpeopleInput.value = 0;
         nofpeopleValid.textContent="Enter a No. between 0 & 100";
         return false; 
@@ -315,6 +332,57 @@ function numberOfPeopleValidation() {
         nofpeopleValid.textContent='';
         return nofpeopleInput.value;
 
+}
+
+// name validation number
+
+function nameValidation () { 
+    if(nameInput.value === "" ) { 
+        nameValid.textContent="Please enter your name"; 
+        return false;
+    } else { 
+        nameValid.textContent=""; 
+        return true;
+    }
+} 
+
+// email validation
+
+function emailValidation () { 
+    let emailRegex = /^([a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})$/; 
+
+    if(emailInput.value === "") { 
+        emailValid.textContent="Please enter your email"; 
+        return false;
+    } else if(!emailInput.value.match(emailRegex)) { 
+        emailValid.textContent="Please enter a valid email"; 
+        return false;
+    } else { 
+        emailValid.textContent=""
+        return true;
+    }
+}
+
+// restaurant location validation 
+
+function rlocationValidation () { 
+    if(rlocationInput.value === "") { 
+        rlocationValid.textContent="Select a restaurant location"
+        return false;
+    } else { 
+        return true;
+    }
+}
+
+// restaurant seating validation 
+
+function rseatingValidation () { 
+    if(rseatingtypeInput.value === "") { 
+        rseatingValid.textContent="Please select a seating type"
+        return false;
+    } else { 
+        return true;
+    }
 }
 
 function collectingValues() { 

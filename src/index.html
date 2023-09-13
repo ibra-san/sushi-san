@@ -6,7 +6,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;800;900&display=swap" rel="stylesheet">
-    <link href="/dist/output.css" rel="stylesheet"> 
+    <link href="../dist/output.css" rel="stylesheet"> 
     <link rel="stylesheet" href="style.css">
     <script src="index.js" defer></script>
     <title>Sushi San</title>
@@ -208,11 +208,12 @@
                 <!-- Reservation form conainer div-->
                 <div class=" flex flex-col items-center ">
                     
-                    <form class="   bg-slate-950 rounded-3xl flex flex-col items-center  p-5 gap-2 w-[90%] md:max-w-[500px] " onsubmit="return false">
+                    <form class="   bg-slate-950 rounded-3xl flex flex-col items-center  p-5 gap-2 w-[90%] md:max-w-[500px] ">
                         <h2 class="text-[25px] font-bold">Book Your Spot at Sushi San</h2>
                         <div class=" relative flex flex-col w-[80%] p-3 group">
                             <label class=" text-sky-400 text-[1rem] mb-2" for="name">Your Name: 
                             </label>
+                            <span id="name-valid" class="absolute left-[115px] text-red-400 font-extrabold"></span>
                             <input class="rounded-sm text-black p-2 outline-none group-focus-within:ring group-focus-within:ring-blue-400 group-focus:outline-[2px] placeholder:text-[0.80rem]" 
                             id="name" name="name" type="text" placeholder="e.g: James Doe" required>  
                         </div>
@@ -220,6 +221,7 @@
 
                         <div class=" relative flex flex-col w-[80%] p-3 group  focus-within:bg-opacity-80">
                             <label class=" text-sky-400 text-[1rem] mb-2" for="email">Email:</label>
+                            <span id="email-valid" class="absolute left-[70px] text-red-400 font-extrabold"></span>
                             <input class="rounded-sm text-black p-2  outline-none group-focus-within:ring group-focus-within:ring-blue-400 group-focus:outline-[2px] peer placeholder:text-[0.80rem]" id="email" name="email" placeholder="e.g: jamesdoe@gmail.com" type="email" required>
                             
                         </div>
@@ -227,6 +229,7 @@
 
                         <div class=" relative flex flex-col w-[80%] p-3 group  focus-within:bg-opacity-80">
                             <label class="text-sky-400 text-[1rem] mb-2" for="pnumber">Phone No.:</label>
+                            <span id="phone-valid" class="absolute left-[130px] text-red-400 font-extrabold"></span>
                             <span id="pnumber-valid" class="absolute left-[105px] text-red-400 font-extrabold"></span>
                             <input class="rounded-sm text-black p-2  outline-none group-focus-within:ring group-focus-within:ring-blue-400 group-focus:outline-[2px] peer placeholder:text-[0.80rem]" id="pnumber" name="pnumber" type="tel" maxlength="10" placeholder="e.g: 0123456789" required>
                            
@@ -237,6 +240,7 @@
                         <div class=" relative flex flex-col w-[80%] p-3 group  focus-within:bg-opacity-80">
 
                             <label class="text-sky-400 text-[1rem] mb-2" for="rlocation" id="rlocationlabel">Restaurant Location: </label>
+                            <span id="rlocation-valid" class="absolute left-[180px] text-red-400 font-extrabold"></span>
 
                             <select class="bg-white w-full h-full appearance-none rounded-sm p-2 text-black  outline-none group-focus-within:ring group-focus-within:ring-blue-400 group-focus:outline-[2px] font-['Poppins'] hover:cursor-pointer" name="rlocation" id="rlocation">
                                 <option class="font-['Poppins']" value="" disabled selected></option>
@@ -255,6 +259,7 @@
                         <div class=" relative flex flex-col w-[80%] p-3 group focus-within:bg-opacity-80">
 
                             <label class="text-sky-400 text-[1rem] mb-2 " for="rseatingtype" id="rseatingtypeLabel">Seating Type:</label>
+                            <span id="rseating-valid" class="absolute left-[140px] text-red-400 font-extrabold"></span>
 
                            <select class="bg-white appearance-none rounded-sm  text-black p-2  outline-none group-focus-within:ring group-focus-within:ring-blue-400 group-focus:outline-[2px] peer hover:cursor-pointer" name="rseatingtype" id="rseatingtype">
                                 <option value="" disabled selected></option>
@@ -274,7 +279,8 @@
                             <input class="rounded-sm text-black p-2  outline-none group-focus-within:ring group-focus-within:ring-blue-400 group-focus:outline-[2px] peer placeholder:text-[0.80rem]" id="nofpeople" name="nofpeople" type="number" placeholder="e.g: 3" required>  
                         </div>
 
-                        <p class=" w-[80%] pl-3 pr-3 text-[1rem] text-blue-400">Reservation Date: </p>
+                        <p class=" relative w-[80%] pl-3 pr-3 text-[1rem] text-blue-400">Reservation Date: <span id="date-valid" class="absolute left-[170px] text-red-400 font-extrabold"></span> </p>
+                        
 
                         <div id="date-picker" class="relative flex flex-col  w-[75%] p-3 group  focus-within:bg-opacity-80 mb-3 bg-white text-black rounded-sm cursor-pointer hover:bg-slate-200">
                             
@@ -297,7 +303,7 @@
 
                         <!--Form Submission btn container-->
                         <div class="flex justify-center w-full">
-                            <input class="border text-center p-5 w-[200px] bg-white text-slate-950 hover:bg-slate-950 hover:text-slate-100 hover:cursor-pointer" value="Book Now" id="book-btn"  type="submit" />
+                            <input class="border text-center p-5 w-[200px] bg-white text-slate-950 hover:bg-slate-950 hover:text-slate-100 hover:cursor-pointer" value="Book Now" id="book-btn"  type="button" />
                         </div>
                     </form>
                 </div>
