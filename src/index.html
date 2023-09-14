@@ -204,11 +204,11 @@
 
         <div class="flex flex-col gap-7">
             <!-- saftey container div-->
-            <div class="">
+            <div id="reserve-form" class="">
                 <!-- Reservation form conainer div-->
-                <div class=" flex flex-col items-center ">
+                <div class="flex flex-col items-center ">
                     
-                    <form class="   bg-slate-950 rounded-3xl flex flex-col items-center  p-5 gap-2 w-[90%] md:max-w-[500px] ">
+                    <form class="   bg-slate-950 rounded-3xl flex flex-col items-center  p-5 gap-2 w-[95%] md:max-w-[600px] ">
                         <h2 class="text-[25px] font-bold">Book Your Spot at Sushi San</h2>
                         <div class=" relative flex flex-col w-[80%] p-3 group">
                             <label class=" text-sky-400 text-[1rem] mb-2" for="name">Your Name: 
@@ -244,11 +244,11 @@
 
                             <select class="bg-white w-full h-full appearance-none rounded-sm p-2 text-black  outline-none group-focus-within:ring group-focus-within:ring-blue-400 group-focus:outline-[2px] font-['Poppins'] hover:cursor-pointer" name="rlocation" id="rlocation">
                                 <option class="font-['Poppins']" value="" disabled selected></option>
-                                <option value="tokyo">Tokyo</option>
-                                <option value="kyoto">Kyoto</option>
-                                <option value="fukukoa">Fukukoa</option>
-                                <option value="sendai">Sendai</option>
-                                <option value="yokohama">Yokohama</option>
+                                <option value="Tokyo">Tokyo</option>
+                                <option value="Kyoto">Kyoto</option>
+                                <option value="Fukukoa">Fukukoa</option>
+                                <option value="Sendai">Sendai</option>
+                                <option value="Yokohama">Yokohama</option>
                             </select>
                             
                             <span class="downarrow | absolute w-10 h-10 bg-slate-200 top-11 right-3 rounded-sm flex justify-center items-center pointer-events-none"><img width="20" height="20" src="https://img.icons8.com/fluency-systems-filled/48/chevron-down--v2.png" alt="chevron-down--v2"/></span>
@@ -263,9 +263,9 @@
 
                            <select class="bg-white appearance-none rounded-sm  text-black p-2  outline-none group-focus-within:ring group-focus-within:ring-blue-400 group-focus:outline-[2px] peer hover:cursor-pointer" name="rseatingtype" id="rseatingtype">
                                 <option value="" disabled selected></option>
-                                <option value="privaterbusiness">Private Room: Business</option>
-                                <option value="privaterfamily">Private Room: Family</option>
-                                <option value="executivehall">Main hall</option>
+                                <option value="Private Room: Business">Private Room: Business</option>
+                                <option value="Private Room: Family">Private Room: Family</option>
+                                <option value="Main hall">Main hall</option>
                             </select>
                             
                             <span class="downarrow | absolute w-10 h-10 bg-slate-200 top-11 right-3 rounded-sm flex justify-center items-center pointer-events-none"><img width="20" height="20" src="https://img.icons8.com/fluency-systems-filled/48/chevron-down--v2.png" alt="chevron-down--v2"/></span>
@@ -279,13 +279,13 @@
                             <input class="rounded-sm text-black p-2  outline-none group-focus-within:ring group-focus-within:ring-blue-400 group-focus:outline-[2px] peer placeholder:text-[0.80rem]" id="nofpeople" name="nofpeople" type="number" placeholder="e.g: 3" required>  
                         </div>
 
-                        <p class=" relative w-[80%] pl-3 pr-3 text-[1rem] text-blue-400">Reservation Date: <span id="date-valid" class="absolute left-[170px] text-red-400 font-extrabold"></span> </p>
+                        <p class=" relative w-[80%] pl-3 pr-3 text-[1rem] text-blue-400">Reservation Date: <span id="date-valid" class="absolute left-[160px] text-red-400 font-extrabold"></span> </p>
                         
 
                         <div id="date-picker" class="relative flex flex-col  w-[75%] p-3 group  focus-within:bg-opacity-80 mb-3 bg-white text-black rounded-sm cursor-pointer hover:bg-slate-200">
                             
 
-                            <div id="selected-date" class=" w-full h-full flex justify-center items-center text-[20px]"></div>
+                            <div id="selected-date" class=" w-full h-full flex justify-center items-center text-[20px]" data-value=""></div>
 
                             <div id="dates" class="hidden">
 
@@ -309,21 +309,25 @@
                 </div>
             </div>
 
-            <div>
+            <div id="reserve-card" class="reservation-card-pdf p-3 flex justify-center items-center ">
                 <!--Confirmation of reservation page -->
-                <div class="">
+                <div class=" p-4 rounded-xl w-[70%] bg-slate-950">
                    <div>
-                    <h2 class="card-title">From Sushi San <span class="card-title-location"></span></h2>
+                    <h2 class="card-title">From Sushi San:  <span class="card-title-location"></span></h2>
                     <h3 class="">Dear <span class="card-name"></span>,</h3>
+                    <br>
                     <div>Thank you for your reservation. Below are your reservation details: 
-                        <div class="rlocation"></div>
-                        <div class="rseating"></div>
-                        <div class="noPeople"></div>
-                        <div class="datetime"></div>
+                        <div class="rlocation text-green-500 font-extrabold"></div>
+                        <div class="rseating text-green-500 font-extrabold"></div>
+                        <div class="noPeople text-green-500 font-extrabold"></div>
+                        <div class="datetime text-green-500 font-extrabold"></div>
                     </div>
-                    <p class="email">An email has been sent with the above reservation detail as well.</p>
+                    <br>
+                    <div>An email has been sent with the above reservation detail as well to the following email: <p class="email text-green-500 font-extrabold"></p></div>
+                    <br>
                     <div> Thank you again for your reservation. Looking forward to serving you.</div>
-                    <button>Download Invitation Card</button>
+                    <br>
+                    <button class="border p-4 mb-6 hover:bg-slate-50 hover:text-slate-950" type="button" >Download Invitation Card</button>
                    </div>
                 </div>
             </div>

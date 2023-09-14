@@ -1,3 +1,4 @@
+import {  jsPDF } from "jspdf";
 
 const navBar = document.querySelector("#nav");
 const overlay = document.querySelector("#overlay")
@@ -52,6 +53,12 @@ const rlocationValid = document.querySelector("#rlocation-valid");
 const rseatingValid = document.querySelector("#rseating-valid");
 const dateValid = document.querySelector("#date-valid"); 
 
+// form and reservation appearing / disappearing
+const reserveForm = document.querySelector("#reserve-form"); 
+const reserveCard = document.querySelector("#reserve-card");
+
+// for pdf 
+const reservePdf = document.querySelector(".reserve-pdf-card"); 
 
 menuOpenBtn.addEventListener("click", () => { 
     menu.classList.add("menu-appear");
@@ -277,15 +284,18 @@ bookBtn.addEventListener("click", function() {
 
     let correctPhoneNo = phoneNumberValidation(); 
     let correctPeopleNo = numberOfPeopleValidation(); 
-    nameValidation();
-    emailValidation();
-    rlocationValidation();
-    rseatingValidation();
+    let correctName = nameValidation();
+    let correctEmail = emailValidation();
+    let correctRLocation = rlocationValidation();
+    let correctRSeating = rseatingValidation();
+    let correctDate = dateValdation();
 
-    if(correctPeopleNo === false || correctPhoneNo === false) { 
+    if(correctPeopleNo === false || correctPhoneNo === false || correctName === false || correctEmail === false || correctRLocation === false || correctRSeating === false || correctDate === false) { 
         
     } else { 
         collectingValues();
+        reserveForm.classList.add("hidden"); 
+        reserveCard.classList.remove("hidden");
     }
     
     
@@ -367,9 +377,10 @@ function emailValidation () {
 
 function rlocationValidation () { 
     if(rlocationInput.value === "") { 
-        rlocationValid.textContent="Select a restaurant location"
+        rlocationValid.textContent="Select a restaurant location";
         return false;
     } else { 
+        rlocationValid.textContent="";
         return true;
     }
 }
@@ -381,6 +392,19 @@ function rseatingValidation () {
         rseatingValid.textContent="Please select a seating type"
         return false;
     } else { 
+        rseatingValid.textContent="";
+        return true;
+    }
+}
+
+// date validation 
+
+function dateValdation () { 
+    if(selectedDateElement.dataset.value === "") { 
+        dateValid.textContent="Please choose a date."
+        return false;
+    } else { 
+        dateValid.textContent=""
         return true;
     }
 }
@@ -393,14 +417,20 @@ function collectingValues() {
     let seatingType = rseatingtypeInput.value;
     let numberPeople = numberOfPeopleValidation(); 
    
+    let splitDateOnly = selectedDateElement.dataset.value.split(" ", 3); 
+    let joinedDateOnly = splitDateOnly.join(" ");
 
     reserveRLocation.textContent=restaurantL;
     reserveName.textContent=name;
-    reserveLocation.textContent=restaurantL; 
+    reserveLocation.textContent="Branch: " + restaurantL; 
     reserveEmail.textContent=email;
-    reserveSeating.textContent=seatingType; 
-    reserveNoPeople.textContent=numberPeople;
-    reservedate.textContent=selectedDateElement.dataset.value;
+    reserveSeating.textContent="Seating Type: " + seatingType; 
+    reserveNoPeople.textContent="Number of people attending: " + numberPeople;
+    reservedate.textContent="Date: " + joinedDateOnly + " " + selectedYear;
 
 
 }
+
+
+// form and reservation appearing / disappearing
+reserveCard.classList.add("hidden");
