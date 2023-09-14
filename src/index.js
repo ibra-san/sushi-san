@@ -1,4 +1,5 @@
-import {  jsPDF } from "jspdf";
+import {jsPDF} from "jspdf"
+const doc = new jsPDF(); 
 
 const navBar = document.querySelector("#nav");
 const overlay = document.querySelector("#overlay")
