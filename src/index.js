@@ -1,5 +1,3 @@
-import {jsPDF} from "jspdf"
-const doc = new jsPDF(); 
 
 const navBar = document.querySelector("#nav");
 const overlay = document.querySelector("#overlay")
@@ -59,7 +57,8 @@ const reserveForm = document.querySelector("#reserve-form");
 const reserveCard = document.querySelector("#reserve-card");
 
 // for pdf 
-const reservePdf = document.querySelector(".reserve-pdf-card"); 
+const reservePdf = document.querySelector("#reserve-card"); 
+const reservePdfBtn = document.querySelector("#pdf-btn");
 
 menuOpenBtn.addEventListener("click", () => { 
     menu.classList.add("menu-appear");
@@ -435,3 +434,11 @@ function collectingValues() {
 
 // form and reservation appearing / disappearing
 reserveCard.classList.add("hidden");
+
+// For generating pdf
+reservePdfBtn.addEventListener("click", generatePDF);
+
+function generatePDF() { 
+    
+    html2pdf(reservePdf)
+}
