@@ -439,6 +439,7 @@ reserveCard.classList.add("hidden");
 reservePdfBtn.addEventListener("click", generatePDF);
 
 function generatePDF() { 
-    
-    html2pdf(reservePdf)
+    var pdfCard = document.querySelector("#pdf-card");
+
+   html2pdf().from(pdfCard).save();
 }

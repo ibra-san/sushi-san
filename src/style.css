@@ -76,3 +76,22 @@ input[type=number] {
 .selectedDay:hover { 
     color: white;
 }
+
+@media print { 
+        div.breadcrumbs
+    {
+        display: none;
+    }
+
+    .reservation-card-pdf { 
+        font-family: 'Poppins', sans-serif;
+        border: 2px sold transparent;
+        border-radius: 10px;
+        background-color: #020617;
+        color: white;
+    }
+
+    #pdf-btn { 
+        display: none;
+    }
+}

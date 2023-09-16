@@ -310,7 +310,7 @@
 
             <div id="reserve-card" class="reservation-card-pdf p-3 flex justify-center items-center ">
                 <!--Confirmation of reservation page -->
-                <div class=" p-4 rounded-xl w-[70%] bg-slate-950">
+                <div id="pdf-card" class=" p-4 rounded-xl w-[70%] bg-slate-950">
                    <div>
                     <h2 class="card-title">From Sushi San:  <span class="card-title-location"></span></h2>
                     <h3 class="">Dear <span class="card-name"></span>,</h3>
@@ -326,8 +326,9 @@
                     <br>
                     <div> Thank you again for your reservation. Looking forward to serving you.</div>
                     <br>
-                    <button id="pdf-btn" class="border p-4 mb-6 hover:bg-slate-50 hover:text-slate-950" type="button" >Download Invitation Card</button>
-                   </div>
+                    
+                </div>
+                <button id="pdf-btn" class="border p-4 mb-6 hover:bg-slate-50 hover:text-slate-950" type="button" >Download Invitation Card</button>
                 </div>
             </div>
 
@@ -335,7 +336,7 @@
 
     </section>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://raw.githack.com/eKoopmans/html2pdf/master/dist/html2pdf.bundle.js" defer></script>
     <script src="index.js"></script>
 </body>
 </html>
