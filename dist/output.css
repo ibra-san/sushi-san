@@ -1141,21 +1141,6 @@ video {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-@media print {
-  div.breadcrumbs
-{
-    display: none;
-  }
-
-  .reservation-card-pdf {
-    font-family: 'Poppins', sans-serif;
-    border: 2px sold transparent;
-    border-radius: 10px;
-    background-color: #020617;
-    color: white;
-  }
-}
-
 .placeholder\:text-\[0\.80rem\]::-moz-placeholder {
   font-size: 0.80rem;
 }
@@ -1350,3 +1335,4 @@ video {
     opacity: 1;
   }
 }
+

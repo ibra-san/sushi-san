@@ -436,10 +436,7 @@ function collectingValues() {
 reserveCard.classList.add("hidden");
 
 // For generating pdf
-reservePdfBtn.addEventListener("click", generatePDF);
-
-function generatePDF() { 
-    var pdfCard = document.querySelector("#pdf-card");
-
-   html2pdf().from(pdfCard).save();
-}
+reservePdfBtn.addEventListener("click", function () { 
+    const pdfCard = document.querySelector("#pdf-card");
+    print();
+} )
