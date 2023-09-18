@@ -87,8 +87,7 @@ input[type=number] {
         font-family: 'Poppins', sans-serif;
         border: 2px sold transparent;
         border-radius: 10px;
-        background-color: #020617;
-        color: white;
+        color: black;
     }
 
     #pdf-btn { 

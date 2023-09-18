@@ -36,9 +36,9 @@ const nofpeopleValid = document.querySelector("#nofpeople-valid");
 // Form Submission and value collection: 
 const bookBtn = document.querySelector("#book-btn"); 
 
+// reservation card values
 const reserveRLocation = document.querySelector(".card-title-location"); 
 const reserveName = document.querySelector(".card-name"); 
-const reserveEmail = document.querySelector(".email");
 const reserveLocation = document.querySelector(".rlocation"); 
 const reserveSeating = document.querySelector(".rseating"); 
 const reserveNoPeople = document.querySelector(".noPeople"); 
@@ -412,7 +412,6 @@ function dateValdation () {
 function collectingValues() { 
 
     let name = nameInput.value; 
-    let email = emailInput.value; 
     let restaurantL = rlocationInput.value;
     let seatingType = rseatingtypeInput.value;
     let numberPeople = numberOfPeopleValidation(); 
@@ -423,7 +422,6 @@ function collectingValues() {
     reserveRLocation.textContent=restaurantL;
     reserveName.textContent=name;
     reserveLocation.textContent="Branch: " + restaurantL; 
-    reserveEmail.textContent=email;
     reserveSeating.textContent="Seating Type: " + seatingType; 
     reserveNoPeople.textContent="Number of people attending: " + numberPeople;
     reservedate.textContent="Date: " + joinedDateOnly + " " + selectedYear;
