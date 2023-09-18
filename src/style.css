@@ -20,6 +20,37 @@
 font-family: 'Poppins', sans-serif;
 */ 
 
+.tokyo-branch { 
+    background-image: url("../assets/sushi_rest_2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.kyoto-branch { 
+    background-image: url("../assets/sushi_rest_3.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.fukukoa-branch { 
+    background-image: url("../assets/sushi_rest_4.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.sendai-branch { 
+    background-image: url("../assets/sushi_rest_5.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.yokohama-branch { 
+    background-image: url("../assets/sushi_rest_6.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
 
 .menu-appear { 
     transition: 0.5s ease-in-out;
