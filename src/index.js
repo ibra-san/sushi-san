@@ -1,7 +1,8 @@
-
+const pageLoader = document.querySelector("#loader");
 const navBar = document.querySelector("#nav");
 const overlay = document.querySelector("#overlay")
 const menu = document.querySelector("#menu"); // The container that contains the overlay and menu 
+
 const menuItems = document.querySelector("#menu-items")
 const menuOpenBtn = document.querySelector("#menu-open"); 
 const menuCloseBtn = document.querySelector("#menu-close"); 
@@ -59,6 +60,12 @@ const reserveCard = document.querySelector("#reserve-card");
 // for pdf 
 const reservePdf = document.querySelector("#reserve-card"); 
 const reservePdfBtn = document.querySelector("#pdf-btn");
+
+
+// page loader code
+window.addEventListener("load", function () { 
+    pageLoader.classList.add("hidden")
+})
 
 menuOpenBtn.addEventListener("click", () => { 
     menu.classList.add("menu-appear");
