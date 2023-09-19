@@ -628,6 +628,14 @@ video {
   top: 2.75rem;
 }
 
+.bottom-0 {
+  bottom: 0px;
+}
+
+.left-0 {
+  left: 0px;
+}
+
 .z-10 {
   z-index: 10;
 }
@@ -674,6 +682,10 @@ video {
 
 .mt-\[60px\] {
   margin-top: 60px;
+}
+
+.mb-5 {
+  margin-bottom: 1.25rem;
 }
 
 .block {
@@ -820,6 +832,14 @@ video {
   width: 90%;
 }
 
+.w-\[50px\] {
+  width: 50px;
+}
+
+.w-auto {
+  width: auto;
+}
+
 .max-w-\[300px\] {
   max-width: 300px;
 }
@@ -831,6 +851,10 @@ video {
 
 .cursor-pointer {
   cursor: pointer;
+}
+
+.list-none {
+  list-style-type: none;
 }
 
 .appearance-none {
@@ -1067,6 +1091,10 @@ video {
   text-align: center;
 }
 
+.text-end {
+  text-align: end;
+}
+
 .font-\[\'Poppins\'\] {
   font-family: 'Poppins';
 }
@@ -1089,6 +1117,11 @@ video {
 
 .text-\[50px\] {
   font-size: 50px;
+}
+
+.text-base {
+  font-size: 1rem;
+  line-height: 1.5rem;
 }
 
 .font-bold {
@@ -1308,8 +1341,28 @@ video {
     width: 80%;
   }
 
+  .md\:w-full {
+    width: 100%;
+  }
+
+  .md\:w-\[200px\] {
+    width: 200px;
+  }
+
+  .md\:w-auto {
+    width: auto;
+  }
+
   .md\:max-w-\[600px\] {
     max-width: 600px;
+  }
+
+  .md\:flex-row {
+    flex-direction: row;
+  }
+
+  .md\:gap-0 {
+    gap: 0px;
   }
 
   .md\:pr-4 {
