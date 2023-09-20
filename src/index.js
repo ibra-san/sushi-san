@@ -303,6 +303,7 @@ bookBtn.addEventListener("click", function() {
         collectingValues();
         reserveForm.classList.add("hidden"); 
         reserveCard.classList.remove("hidden");
+        reserveCard.scrollIntoView();
     }
     
     

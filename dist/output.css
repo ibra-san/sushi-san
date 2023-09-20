@@ -736,6 +736,18 @@ video {
   height: 100vh;
 }
 
+.h-\[200vh\] {
+  height: 200vh;
+}
+
+.h-\[300vh\] {
+  height: 300vh;
+}
+
+.h-\[250vh\] {
+  height: 250vh;
+}
+
 .min-h-screen {
   min-height: 100vh;
 }
@@ -1328,10 +1340,6 @@ video {
 }
 
 @media (min-width: 1024px) {
-  .lg\:h-\[500px\] {
-    height: 500px;
-  }
-
   .lg\:w-\[100\%\] {
     width: 100%;
   }
