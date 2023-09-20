@@ -6,7 +6,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;800;900&display=swap" rel="stylesheet">
-    <link href="../dist/output.css" rel="stylesheet"> 
+    <link href="build.css" rel="stylesheet"> 
     <link rel="icon" type="../assets/Sushi San Logo-modified.ico" href="/images/favicon.ico">
     <link rel="stylesheet" href="style.css">
     <title>Sushi San</title>
@@ -45,7 +45,7 @@
                     <a class="w-full mt-[60px] p-3 text-center border border-slate-100 hover:bg-slate-100 hover:text-black" href="#history"><li>History</li></a>
                     <a class="w-full p-3 text-center border border-slate-100 hover:bg-slate-100 hover:text-black" href="#gallary"><li>Gallary</li></a>
                     <a class="w-full p-3 text-center border border-slate-100 hover:bg-slate-100 hover:text-black" href="#reservation"><li>Reservation</li></a>
-                    <a class="w-full p-3 text-center border border-slate-100 hover:bg-slate-100 hover:text-black" href="#"><li>Contact Us</li></a>
+                    <a class="w-full p-3 text-center border border-slate-100 hover:bg-slate-100 hover:text-black" href="#contact-us"><li>Contact Us</li></a>
                     <!-- Social media btns container-->
                     <div class="inline-flex justify-center gap-5">
                         <a href="https://www.instagram.com/imsanwork/" target="_blank">
@@ -68,7 +68,11 @@
 
     <section class=" w-full min-h-screen p-[100px] flex flex-row justify-between items-center bg-gray-950 text-white ">
         <!--Video of sushi-->
-        <video class="absolute z-[10] top-0 right-0 w-full h-full object-cover" src="../assets/sushi video 3.mp4" autoplay loop muted></video> 
+        <video class="absolute z-[10] top-0 right-0 w-full h-full object-cover" autoplay loop muted>
+            <source src="../assets/sushi video 3.mp4" type="video/mp4" />
+            <source src="../assets/sushi video 3.webm" type="video/webm" />
+
+        </video> 
 
         <!-- Video overlay -->
         <div class="absolute z-[30] top-0 right-0 w-full h-full bg-gray-500 mix-blend-overlay "></div>
@@ -81,7 +85,7 @@
             <p class="max-w-[300px]">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis corrupti architecto iusto laboriosam tempore id deserunt, necessitatibus est ipsam reprehenderit!</p>
              <!-- Cta buttons container -->
             <div class="flex gap-[50px]">
-                <a href="#" class="p-2 pl-4 pr-4 border border-slate-100 hover:bg-slate-100 hover:text-slate-950">Reservation</a>
+                <a href="#reservation" class="p-2 pl-4 pr-4 border border-slate-100 hover:bg-slate-100 hover:text-slate-950">Reservation</a>
             </div>
         </div>
         
